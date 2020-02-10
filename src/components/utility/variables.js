@@ -21,4 +21,8 @@ const colors = {
   info: '#00A8F0',
 }
 
-export { breakpoints, colors }
+const fonts = {
+  main: "'M PLUS 1p', sans-serif",
+}
+
+export { breakpoints, colors, fonts }
