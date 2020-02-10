@@ -5,6 +5,9 @@ import { Link } from 'gatsby'
 import { colors, breakpoints } from '../utility/variables'
 
 const NavListStyled = styled.nav`
+  width: 100%;
+  transform: translateY(-10%);
+
   & ul {
     display: flex;
     flex-direction: column;
@@ -15,7 +18,7 @@ const NavListStyled = styled.nav`
   & a {
     text-decoration: none;
     font-size: 1.3rem;
-    padding: 1rem;
+    padding: 1.5rem;
     display: block;
     color: ${colors.white};
   }

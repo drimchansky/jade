@@ -20,7 +20,7 @@ const StyledHamburger = styled.button`
     position: absolute;
     border-radius: 50px;
     background-color: ${props =>
-      props.location.pathname === '/' ? 'white' : 'black'};
+      props.location.pathname === '/' || props.open ? 'white' : 'black'};
     transform: ${props =>
       props.open
         ? 'translate(-50%,-50%) rotate(135deg);'
