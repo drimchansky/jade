@@ -1,3 +1,10 @@
+const breakpoints = {
+  small: 'min-width: 576px',
+  medium: 'min-width: 768px',
+  large: 'min-width: 992px',
+  extra: 'min-width: 1200px',
+}
+
 const colors = {
   primary: '#F61067',
   secondaryOne: '#5E239D',
@@ -14,4 +21,4 @@ const colors = {
   info: '#00A8F0',
 }
 
-export default colors
+export { breakpoints, colors }
