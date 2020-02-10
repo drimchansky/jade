@@ -1,7 +1,12 @@
-import React from "react"
+import React from 'react'
 
-import Layout from "../components/Layout"
+import Layout from '../components/layouts/Layout'
+import FrontScreen from '../components/layouts/FrontScreen'
 
 export default () => {
-  return <Layout>Hello World</Layout>
+  return (
+    <Layout>
+      <FrontScreen />
+    </Layout>
+  )
 }
