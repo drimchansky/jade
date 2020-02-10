@@ -1,9 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
 
+import { fonts } from './variables'
+
 const GlobalStyles = createGlobalStyle`
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  font-family: ${fonts.main};
 }
 
 *:focus {

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const NavList = () => {
-  return <div></div>
+  return <div>List</div>
 }
 
 export default NavList
