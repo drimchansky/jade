@@ -1,9 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { colors, breakpoints, fonts } from '../utility/variables'
+
 const PhoneStyled = styled.svg`
   height: 30px;
   padding: 4px;
+  fill: ${colors.white};
 `
 
 const Phone = () => {

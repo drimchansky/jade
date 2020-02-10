@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Location } from '@reach/router'
 
 const StyledHamburger = styled.button`
   position: absolute;
@@ -18,7 +19,8 @@ const StyledHamburger = styled.button`
     width: 80px;
     position: absolute;
     border-radius: 50px;
-    background-color: white;
+    background-color: ${props =>
+      props.location.pathname === '/' ? 'white' : 'black'};
     transform: ${props =>
       props.open
         ? 'translate(-50%,-50%) rotate(135deg);'
@@ -58,9 +60,17 @@ const StyledHamburger = styled.button`
 
 const Hamburger = ({ open, setOpen }) => {
   return (
-    <StyledHamburger open={open} onClick={() => setOpen(!open)}>
-      <span></span>
-    </StyledHamburger>
+    <Location>
+      {({ location }) => (
+        <StyledHamburger
+          location={location}
+          open={open}
+          onClick={() => setOpen(!open)}
+        >
+          <span></span>
+        </StyledHamburger>
+      )}
+    </Location>
   )
 }
 
