@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import colors from '../utility/colors'
 import Header from '../header/Header'
 
 const FrontScreenStyled = styled.div`
-  background: rebeccapurple;
+  background: ${colors.tetriary};
   height: 100px;
 `
 
