@@ -14,11 +14,11 @@ const StyledHamburger = styled.button`
   background: none;
 
   & span {
-    height: 10px;
+    height: 8px;
     width: 80px;
     position: absolute;
     border-radius: 50px;
-    background-color: black;
+    background-color: white;
     transform: ${props =>
       props.open
         ? 'translate(-50%,-50%) rotate(135deg);'

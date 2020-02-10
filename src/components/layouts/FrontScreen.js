@@ -6,6 +6,7 @@ import Header from '../header/Header'
 
 const FrontScreenStyled = styled.div`
   background: ${colors.secondaryOne};
+  min-height: 100vh;
 
   @media (${breakpoints.large}) {
     min-height: 100vh;

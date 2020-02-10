@@ -6,6 +6,8 @@ import Phone from '../images/Phone'
 const NumberStyled = styled.span`
   display: flex;
   align-items: center;
+  font-size: 1.2rem;
+  padding: 1rem;
 `
 
 const Number = () => {
