@@ -11,12 +11,18 @@ const HeaderStyled = styled.header`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.2s ease-in-out;
+  transform: ${props => (props.open ? 'translateX(0)' : 'translateX(120%)')};
 `
 
-const Header = () => {
+const Header = ({ open }) => {
   return (
-    <HeaderStyled>
+    <HeaderStyled open={open}>
       <Logo />
       <NavList />
       <Number />

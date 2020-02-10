@@ -8,6 +8,7 @@ const StyledHamburger = styled.button`
   right: 0.5rem;
   top: 0.5rem;
   cursor: pointer;
+  z-index: 10;
   border: none;
   padding: 0;
   background: none;
@@ -17,7 +18,7 @@ const StyledHamburger = styled.button`
     width: 80px;
     position: absolute;
     border-radius: 50px;
-    background-color: white;
+    background-color: black;
     transform: ${props =>
       props.open
         ? 'translate(-50%,-50%) rotate(135deg);'

@@ -15,9 +15,7 @@ const FrontScreenStyled = styled.div`
 const FrontScreen = () => {
   return (
     <>
-      <FrontScreenStyled>
-        <Header />
-      </FrontScreenStyled>
+      <FrontScreenStyled></FrontScreenStyled>
     </>
   )
 }
