@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Location } from '@reach/router'
 
+import { colors, breakpoints, fonts } from '../utility/variables'
+
 const StyledHamburger = styled.button`
   position: absolute;
   height: 80px;
@@ -55,6 +57,9 @@ const StyledHamburger = styled.button`
         props.open ? 'translateX(-100%) rotate(-90deg);' : ''};
       transform-origin: right;
     }
+  }
+  @media (${breakpoints.large}) {
+    display: none;
   }
 `
 

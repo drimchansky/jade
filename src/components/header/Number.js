@@ -8,6 +8,7 @@ const NumberStyled = styled.span`
   align-items: center;
   font-size: 1.2rem;
   padding: 1rem;
+  white-space: nowrap;
 `
 
 const Number = () => {

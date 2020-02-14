@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Location } from '@reach/router'
 
 import { colors, breakpoints } from '../utility/variables'
 import Logo from './Logo'
@@ -26,15 +27,37 @@ const HeaderStyled = styled.header`
     clip-path: ${props =>
       props.open ? 'circle(250% at top right)' : 'circle(0px at top right)'};
   }
+
+  @media (${breakpoints.large}) {
+    position: relative;
+    height: auto;
+    width: 100%;
+    opacity: 1;
+    clip-path: none;
+    position: ${props =>
+      props.location.pathname === '/' ? 'absolute' : 'relative'};
+    left: ${props => (props.location.pathname === '/' ? '50%' : 'none')};
+    transform: ${props =>
+      props.location.pathname === '/' ? 'translateX(-50%)' : 'none'};
+    background: transparent;
+    flex-direction: row;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+  }
 `
 
 const Header = ({ open }) => {
   return (
-    <HeaderStyled open={open}>
-      <Logo />
-      <NavList />
-      <Number />
-    </HeaderStyled>
+    <Location>
+      {({ location }) => (
+        <HeaderStyled open={open} location={location}>
+          <Logo />
+          <NavList />
+          <Number />
+        </HeaderStyled>
+      )}
+    </Location>
   )
 }
 

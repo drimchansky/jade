@@ -22,6 +22,15 @@ const NavListStyled = styled.nav`
     display: block;
     color: ${colors.white};
   }
+
+  @media (${breakpoints.large}) {
+    transform: none;
+    margin-left: 20px;
+
+    ul {
+      flex-direction: row;
+    }
+  }
 `
 
 const NavList = () => {
