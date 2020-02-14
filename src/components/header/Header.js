@@ -20,6 +20,12 @@ const HeaderStyled = styled.header`
   width: 100%;
   transition: transform 0.2s ease-in-out;
   transform: ${props => (props.open ? 'translateX(0)' : 'translateX(120%)')};
+
+  @supports (clip-path: circle(0px)) {
+    transition: clip-path 0.7s ease-in-out;
+    clip-path: ${props =>
+      props.open ? 'circle(250% at top right)' : 'circle(0px at top right)'};
+  }
 `
 
 const Header = ({ open }) => {

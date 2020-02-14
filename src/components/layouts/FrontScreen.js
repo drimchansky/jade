@@ -5,7 +5,7 @@ import { colors, breakpoints, fonts } from '../utility/variables'
 import Header from '../header/Header'
 
 const FrontScreenStyled = styled.div`
-  background: ${colors.secondaryOne};
+  background: ${colors.secondaryTwo};
   min-height: 100vh;
 
   @media (${breakpoints.large}) {
