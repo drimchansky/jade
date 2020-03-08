@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { Location } from '@reach/router'
 
 import { colors, breakpoints, fonts } from '../utility/variables'
 
@@ -9,12 +10,17 @@ const StyledLogo = styled(Link)`
   font-size: 2rem;
   align-self: flex-start;
   padding: 2rem;
-  color: ${colors.white};
+  color: ${props =>
+    props.location.pathname === '/' ? colors.white : colors.primaryTwo};
   text-decoration: none;
 `
 
 const Logo = () => {
-  return <StyledLogo>Looper</StyledLogo>
+  return (
+    <Location>
+      {({ location }) => <StyledLogo location={location}>Looper</StyledLogo>}
+    </Location>
+  )
 }
 
 export default Logo

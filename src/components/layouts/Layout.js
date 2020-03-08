@@ -6,6 +6,7 @@ import Hamburger from '../common/Hamburger'
 import Header from '../header/Header'
 
 const Layout = ({ children }) => {
+  // hamburger state
   const [open, setOpen] = useState(false)
 
   return (
