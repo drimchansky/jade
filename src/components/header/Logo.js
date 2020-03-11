@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { Location } from '@reach/router'
 
-import { colors, breakpoints, fonts } from '../utility/variables'
+import { colors } from '../utility/variables'
 
 const StyledLogo = styled(Link)`
   font-weight: 900;

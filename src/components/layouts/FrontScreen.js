@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { colors, breakpoints, fonts } from '../utility/variables'
+import { colors, breakpoints } from '../utility/variables'
 import Header from '../header/Header'
 
 const FrontScreenStyled = styled.div`
