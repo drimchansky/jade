@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Phone from '../images/Phone'
+import Phone from '../icons/Phone'
 
 const NumberStyled = styled.span`
   display: flex;

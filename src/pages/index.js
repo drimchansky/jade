@@ -1,12 +1,16 @@
 import React from 'react'
 
-import Layout from '../components/layouts/Layout'
-import FrontScreen from '../components/layouts/FrontScreen'
+import Page from '../components/page/Page'
+import SEO from '../components/page/SEO'
+import Header from '../components/header/Header'
 
 export default () => {
   return (
-    <Layout>
-      <FrontScreen />
-    </Layout>
+    <>
+      <SEO title="Главная" />
+      <Page>
+        <Header />
+      </Page>
+    </>
   )
 }

@@ -5,6 +5,9 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: 'Jade',
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Location } from '@reach/router'
 
-import { colors, breakpoints, fonts } from '../utility/variables'
+import { breakpoints } from '../../utility/variables'
 
 const StyledHamburger = styled.button`
   position: absolute;
@@ -15,20 +14,17 @@ const StyledHamburger = styled.button`
   border: none;
   padding: 0;
   background: none;
-
   & span {
     height: 8px;
     width: 80px;
     position: absolute;
     border-radius: 50px;
-    background-color: ${props =>
-      props.location.pathname === '/' || props.open ? 'white' : 'black'};
+    background-color: red;
     transform: ${props =>
       props.open
         ? 'translate(-50%,-50%) rotate(135deg);'
         : 'translate(-50%, -50%) rotate(0deg)'};
     transition: all ease 0.5s;
-
     &::before,
     &::after {
       content: '';
@@ -40,7 +36,6 @@ const StyledHamburger = styled.button`
       width: 50%;
       transition: all ease 0.5s;
     }
-
     &::before {
       ${props => (props.open ? '' : '')};
       top: ${props => (props.open ? '0' : '-20px')};
@@ -49,7 +44,6 @@ const StyledHamburger = styled.button`
         props.open ? 'translateX(100%) rotate(-90deg);' : ''};
       transform-origin: left;
     }
-
     &::after {
       bottom: ${props => (props.open ? '0' : '-20px')};
       right: 0;
@@ -65,17 +59,9 @@ const StyledHamburger = styled.button`
 
 const Hamburger = ({ open, setOpen }) => {
   return (
-    <Location>
-      {({ location }) => (
-        <StyledHamburger
-          location={location}
-          open={open}
-          onClick={() => setOpen(!open)}
-        >
-          <span></span>
-        </StyledHamburger>
-      )}
-    </Location>
+    <StyledHamburger open={open} onClick={() => setOpen(!open)}>
+      <span></span>
+    </StyledHamburger>
   )
 }
 
