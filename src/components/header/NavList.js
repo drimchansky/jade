@@ -35,16 +35,16 @@ const NavList = () => {
     <NavListStyled>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">Главнвя</Link>
         </li>
         <li>
-          <Link to="/">Services</Link>
+          <Link to="/">Услуги</Link>
         </li>
         <li>
-          <Link to="/">Work</Link>
+          <Link to="/">Работы</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about">О нас</Link>
         </li>
       </ul>
     </NavListStyled>

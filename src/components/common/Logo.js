@@ -14,7 +14,7 @@ const StyledLogo = styled(Link)`
 `
 
 const Logo = () => {
-  return <StyledLogo>Looper</StyledLogo>
+  return <StyledLogo>Jade</StyledLogo>
 }
 
 export default Logo

@@ -22,7 +22,7 @@ const colors = {
 }
 
 const fonts = {
-  main: "'M PLUS 1p', sans-serif",
+  main: "'Roboto Slab', serif",
 }
 
 export { breakpoints, colors, fonts }
