@@ -19,6 +19,7 @@ const NavigationStyled = styled.div`
   top: 0;
   height: 100%;
   width: 100%;
+  visibility: ${props => (props.open ? 'visible' : 'hidden')};
   transition: transform 0.2s ease-in-out;
   transform: ${props => (props.open ? 'translateX(0)' : 'translateX(120%)')};
   z-index: 10;
@@ -32,6 +33,7 @@ const NavigationStyled = styled.div`
   @media (${breakpoints.large}) {
     height: auto;
     width: 100%;
+    visibility: visible;
     opacity: 1;
     padding: 1rem 0;
     position: ${props => (props.front ? 'absolute' : 'relative')};

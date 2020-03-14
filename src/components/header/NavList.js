@@ -17,11 +17,30 @@ const NavListStyled = styled.nav`
   & li {
   }
   & a {
+    position: relative;
     color: ${colors.white};
     text-decoration: none;
     font-size: 1.3rem;
     padding: 1.5rem;
     display: block;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover:before,
+    &:focus:before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 55%;
+      border-radius: 4px;
+      background: ${props =>
+        props.front ? colors.white : colors.secondaryTwo};
+    }
   }
   @media (${breakpoints.large}) {
     transform: none;

@@ -21,7 +21,7 @@ html {
 
 *:focus {
   @media (max-width: 768px) {
-    outline: none;
+    outline: none !important;
   }
 }
 
