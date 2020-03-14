@@ -5,6 +5,39 @@ import { Link } from 'gatsby'
 // custom
 import { breakpoints, colors } from '../../utility/variables'
 
+const NavList = ({ front, open, setOpen }) => {
+  const clickHandler = e => {
+    setOpen(!open)
+  }
+
+  return (
+    <NavListStyled front={front}>
+      <ul>
+        <li>
+          <Link to="/" onClick={clickHandler}>
+            Главнвя
+          </Link>
+        </li>
+        <li>
+          <Link to="/services" onClick={clickHandler}>
+            Услуги
+          </Link>
+        </li>
+        <li>
+          <Link to="/works" onClick={clickHandler}>
+            Работы
+          </Link>
+        </li>
+        <li>
+          <Link to="/about" onClick={clickHandler}>
+            О нас
+          </Link>
+        </li>
+      </ul>
+    </NavListStyled>
+  )
+}
+
 const NavListStyled = styled.nav`
   width: 100%;
   transform: translateY(-10%);
@@ -38,10 +71,15 @@ const NavListStyled = styled.nav`
       transform: translateX(-50%);
       width: 55%;
       border-radius: 4px;
-      background: ${props =>
-        props.front ? colors.white : colors.secondaryTwo};
+      background: ${colors.white};
+
+      @media (${breakpoints.large}) {
+        background: ${props =>
+          props.front ? colors.white : colors.secondaryTwo};
+      }
     }
   }
+
   @media (${breakpoints.large}) {
     transform: none;
 
@@ -55,38 +93,5 @@ const NavListStyled = styled.nav`
     }
   }
 `
-
-const NavList = ({ front, open, setOpen }) => {
-  const clickHandler = e => {
-    setOpen(!open)
-  }
-
-  return (
-    <NavListStyled front={front}>
-      <ul>
-        <li>
-          <Link to="/" onClick={clickHandler}>
-            Главнвя
-          </Link>
-        </li>
-        <li>
-          <Link to="/services" onClick={clickHandler}>
-            Услуги
-          </Link>
-        </li>
-        <li>
-          <Link to="/works" onClick={clickHandler}>
-            Работы
-          </Link>
-        </li>
-        <li>
-          <Link to="/about" onClick={clickHandler}>
-            О нас
-          </Link>
-        </li>
-      </ul>
-    </NavListStyled>
-  )
-}
 
 export default NavList

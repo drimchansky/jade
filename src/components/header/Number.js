@@ -1,9 +1,19 @@
+// libraries
 import React from 'react'
 import styled from 'styled-components'
-
+//components
 import Phone from '../icons/Phone'
-
+// custom
 import { colors, breakpoints } from '../../utility/variables'
+
+const Number = ({ front }) => {
+  return (
+    <NumberStyled front={front}>
+      <Phone front={front} />
+      (01) 666 - 693 - 456
+    </NumberStyled>
+  )
+}
 
 const NumberStyled = styled.span`
   display: flex;
@@ -17,14 +27,5 @@ const NumberStyled = styled.span`
     color: ${props => (props.front ? colors.white : colors.secondaryTwo)};
   }
 `
-
-const Number = ({ front }) => {
-  return (
-    <NumberStyled front={front}>
-      <Phone front={front} />
-      (01) 666 - 693 - 456
-    </NumberStyled>
-  )
-}
 
 export default Number

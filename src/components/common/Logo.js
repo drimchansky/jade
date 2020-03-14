@@ -1,8 +1,17 @@
+// libraries
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-
+// custom
 import { colors, breakpoints } from '../../utility/variables'
+
+const Logo = ({ front, position, mobile }) => {
+  return (
+    <StyledLogo front={front} position={position} mobile={mobile}>
+      Jade
+    </StyledLogo>
+  )
+}
 
 const StyledLogo = styled(Link)`
   position: ${props => props.position || ''};
@@ -25,13 +34,5 @@ const StyledLogo = styled(Link)`
   @media (${breakpoints.extra}) {
   }
 `
-
-const Logo = ({ front, position, mobile }) => {
-  return (
-    <StyledLogo front={front} position={position} mobile={mobile}>
-      Jade
-    </StyledLogo>
-  )
-}
 
 export default Logo

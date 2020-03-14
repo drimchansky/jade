@@ -4,9 +4,8 @@ import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import { Link } from 'gatsby'
-
+//components
 import Logo from './common/Logo'
-
 // custom
 import { breakpoints, colors } from '../utility/variables'
 
@@ -45,7 +44,7 @@ const FrontScreen = () => {
 }
 
 const FrontScreenStyled = styled.div`
-  background-color: rgba(21, 4, 51, 0.83);
+  background-color: rgba(58, 4, 117, 0.83);
   min-height: 10px;
   width: 100%;
   background-position: bottom center;

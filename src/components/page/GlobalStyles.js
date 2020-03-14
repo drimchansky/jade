@@ -1,9 +1,9 @@
+// libraries
 import { createGlobalStyle } from 'styled-components'
-
+// custom
 import { fonts, breakpoints } from '../../utility/variables'
 
 const GlobalStyles = createGlobalStyle`
-
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */

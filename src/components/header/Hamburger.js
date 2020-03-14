@@ -1,7 +1,16 @@
+// libraries
 import React from 'react'
 import styled from 'styled-components'
-
+// custom
 import { breakpoints, colors } from '../../utility/variables'
+
+const Hamburger = ({ open, setOpen }) => {
+  return (
+    <StyledHamburger open={open} onClick={() => setOpen(!open)}>
+      <span></span>
+    </StyledHamburger>
+  )
+}
 
 const StyledHamburger = styled.button`
   position: absolute;
@@ -60,13 +69,5 @@ const StyledHamburger = styled.button`
     display: none;
   }
 `
-
-const Hamburger = ({ open, setOpen }) => {
-  return (
-    <StyledHamburger open={open} onClick={() => setOpen(!open)}>
-      <span></span>
-    </StyledHamburger>
-  )
-}
 
 export default Hamburger

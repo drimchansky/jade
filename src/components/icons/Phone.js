@@ -1,17 +1,8 @@
+// libraries
 import React from 'react'
 import styled from 'styled-components'
-
+// custom
 import { colors, breakpoints } from '../../utility/variables'
-
-const PhoneStyled = styled.svg`
-  height: 30px;
-  padding: 4px;
-  fill: ${colors.white};
-
-  @media (${breakpoints.large}) {
-    fill: ${props => (props.front ? colors.white : colors.secondaryTwo)};
-  }
-`
 
 const Phone = ({ front }) => {
   return (
@@ -26,5 +17,15 @@ const Phone = ({ front }) => {
     </>
   )
 }
+
+const PhoneStyled = styled.svg`
+  height: 30px;
+  padding: 4px;
+  fill: ${colors.white};
+
+  @media (${breakpoints.large}) {
+    fill: ${props => (props.front ? colors.white : colors.secondaryTwo)};
+  }
+`
 
 export default Phone

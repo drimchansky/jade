@@ -1,11 +1,22 @@
+// libraries
 import React from 'react'
 import styled from 'styled-components'
-
+// components
 import Logo from '../common/Logo'
 import NavList from './NavList'
 import Number from './Number'
-
+// custom
 import { colors, breakpoints } from '../../utility/variables'
+
+const Navigation = ({ open, front, setOpen }) => {
+  return (
+    <NavigationStyled open={open} front={front}>
+      <Logo front={front} />
+      <NavList front={front} open={open} setOpen={setOpen} />
+      <Number front={front} />
+    </NavigationStyled>
+  )
+}
 
 const NavigationStyled = styled.div`
   display: flex;
@@ -49,15 +60,5 @@ const NavigationStyled = styled.div`
     transform: ${props => (props.front ? 'translateX(-50%)' : '')};
   }
 `
-
-const Navigation = ({ open, front, setOpen }) => {
-  return (
-    <NavigationStyled open={open} front={front}>
-      <Logo front={front} />
-      <NavList front={front} open={open} setOpen={setOpen} />
-      <Number front={front} />
-    </NavigationStyled>
-  )
-}
 
 export default Navigation
