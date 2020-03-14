@@ -11,7 +11,7 @@ const Header = ({ front }) => {
   return (
     <>
       <Hamburger open={open} setOpen={setOpen} />
-      <Navigation open={open} front={front} />
+      <Navigation open={open} setOpen={setOpen} front={front} />
     </>
   )
 }

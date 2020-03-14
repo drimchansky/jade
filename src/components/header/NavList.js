@@ -34,21 +34,33 @@ const NavListStyled = styled.nav`
   }
 `
 
-const NavList = ({ front }) => {
+const NavList = ({ front, open, setOpen }) => {
+  const clickHandler = e => {
+    setOpen(!open)
+  }
+
   return (
     <NavListStyled front={front}>
       <ul>
         <li>
-          <Link to="/">Главнвя</Link>
+          <Link to="/" onClick={clickHandler}>
+            Главнвя
+          </Link>
         </li>
         <li>
-          <Link to="/services">Услуги</Link>
+          <Link to="/services" onClick={clickHandler}>
+            Услуги
+          </Link>
         </li>
         <li>
-          <Link to="/works">Работы</Link>
+          <Link to="/works" onClick={clickHandler}>
+            Работы
+          </Link>
         </li>
         <li>
-          <Link to="/about">О нас</Link>
+          <Link to="/about" onClick={clickHandler}>
+            О нас
+          </Link>
         </li>
       </ul>
     </NavListStyled>

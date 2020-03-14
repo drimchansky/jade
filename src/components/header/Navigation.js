@@ -45,11 +45,11 @@ const NavigationStyled = styled.div`
   }
 `
 
-const Navigation = ({ open, front }) => {
+const Navigation = ({ open, front, setOpen }) => {
   return (
     <NavigationStyled open={open} front={front}>
       <Logo front={front} />
-      <NavList front={front} />
+      <NavList front={front} open={open} setOpen={setOpen} />
       <Number front={front} />
     </NavigationStyled>
   )
