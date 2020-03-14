@@ -8,6 +8,7 @@ const SEO = ({ title }) => {
       site {
         siteMetadata {
           title
+          description
         }
       }
     }
@@ -17,6 +18,7 @@ const SEO = ({ title }) => {
     <Helmet title={`${data.site.siteMetadata.title} | ${title}`}>
       <html lang="ru" />
       <meta name="theme-color" content="#191919" />
+      <meta name="description" content={data.site.siteMetadata.description} />
     </Helmet>
   )
 }

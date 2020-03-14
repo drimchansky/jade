@@ -21,6 +21,7 @@ const NavigationStyled = styled.div`
   width: 100%;
   transition: transform 0.2s ease-in-out;
   transform: ${props => (props.open ? 'translateX(0)' : 'translateX(120%)')};
+  z-index: 10;
 
   @supports (clip-path: circle(0px)) {
     transition: clip-path 0.7s ease-in-out;

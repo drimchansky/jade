@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { fonts } from '../../utility/variables'
+import { fonts, breakpoints } from '../../utility/variables'
 
 const GlobalStyles = createGlobalStyle`
 
@@ -10,6 +10,13 @@ html {
   overflow-x: hidden; 
   font-size: 16px;
   font-family: ${fonts.main};
+
+  @media(${breakpoints.medium}) {
+    font-size: 18px;
+  }
+  @media(${breakpoints.extra}) {
+    font-size: 20px;
+  }
 }
 
 *:focus {

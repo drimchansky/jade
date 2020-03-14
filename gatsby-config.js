@@ -3,6 +3,7 @@ const path = require(`path`)
 module.exports = {
   siteMetadata: {
     title: 'Jade',
+    description: 'Awesome description',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

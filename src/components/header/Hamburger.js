@@ -10,10 +10,11 @@ const StyledHamburger = styled.button`
   right: 0.5rem;
   top: 0.5rem;
   cursor: pointer;
-  z-index: 10;
+  z-index: 11;
   border: none;
   padding: 0;
   background: none;
+
   & span {
     height: 8px;
     width: 80px;
@@ -25,6 +26,7 @@ const StyledHamburger = styled.button`
         ? 'translate(-50%,-50%) rotate(135deg);'
         : 'translate(-50%, -50%) rotate(0deg)'};
     transition: all ease 0.5s;
+
     &::before,
     &::after {
       content: '';
@@ -36,6 +38,7 @@ const StyledHamburger = styled.button`
       width: 50%;
       transition: all ease 0.5s;
     }
+
     &::before {
       ${props => (props.open ? '' : '')};
       top: ${props => (props.open ? '0' : '-20px')};
@@ -44,6 +47,7 @@ const StyledHamburger = styled.button`
         props.open ? 'translateX(100%) rotate(-90deg);' : ''};
       transform-origin: left;
     }
+
     &::after {
       bottom: ${props => (props.open ? '0' : '-20px')};
       right: 0;

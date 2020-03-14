@@ -8,6 +8,7 @@ import { breakpoints, colors } from '../../utility/variables'
 const NavListStyled = styled.nav`
   width: 100%;
   transform: translateY(-10%);
+
   & ul {
     display: flex;
     flex-direction: column;
@@ -21,12 +22,14 @@ const NavListStyled = styled.nav`
     font-size: 1.3rem;
     padding: 1.5rem;
     display: block;
+    letter-spacing: 2px;
   }
   @media (${breakpoints.large}) {
     transform: none;
-    margin-left: 20px;
+
     ul {
       flex-direction: row;
+      justify-content: center;
     }
     a {
       color: ${props => (props.front ? colors.white : colors.secondaryTwo)};
