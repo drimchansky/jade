@@ -39,6 +39,7 @@ const NavigationStyled = styled.div`
     flex-direction: row;
     max-width: 1400px;
     margin: 0 auto;
+    z-index: 10;
     align-items: center;
     left: ${props => (props.front ? '50%' : '')};
     transform: ${props => (props.front ? 'translateX(-50%)' : '')};
