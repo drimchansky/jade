@@ -19,7 +19,7 @@ const Navigation = ({ open, front, setOpen }) => {
 }
 
 const NavigationStyled = styled.div`
-  display: flex;
+  display: ${props => (props.open ? 'flex' : 'none')};
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -31,17 +31,10 @@ const NavigationStyled = styled.div`
   height: 100%;
   width: 100%;
   visibility: ${props => (props.open ? 'visible' : 'hidden')};
-  transition: transform 0.2s ease-in-out;
-  transform: ${props => (props.open ? 'translateX(0)' : 'translateX(120%)')};
   z-index: 10;
 
-  @supports (clip-path: circle(0px)) {
-    transition: clip-path 0.7s ease-in-out;
-    clip-path: ${props =>
-      props.open ? 'circle(250% at top right)' : 'circle(0px at top right)'};
-  }
-
   @media (${breakpoints.large}) {
+    display: flex;
     height: auto;
     width: 100%;
     visibility: visible;
