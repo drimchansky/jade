@@ -33,6 +33,7 @@ const NavigationStyled = styled.div`
     height: auto;
     width: 100%;
     opacity: 1;
+    padding: 1rem 0;
     position: ${props => (props.front ? 'absolute' : 'relative')};
     transform: none;
     clip-path: none;

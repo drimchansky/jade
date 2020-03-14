@@ -5,22 +5,33 @@ import { Link } from 'gatsby'
 import { colors, breakpoints } from '../../utility/variables'
 
 const StyledLogo = styled(Link)`
+  position: ${props => props.position || ''};
+  left: 0;
+  top: 0;
   font-weight: 900;
   font-size: 2rem;
   align-self: flex-start;
-  padding: 2rem;
+  padding: 1rem;
   color: ${colors.white};
   text-decoration: none;
   z-index: 999;
 
   @media (${breakpoints.large}) {
     color: ${props => (props.front ? colors.white : colors.secondaryTwo)};
-    padding-left: 0;
+    display: ${props => (props.mobile ? 'none' : 'block')};
+    z-index: ${props => (props.mobile ? '-1' : '1')};
+    padding-left: 0.5rem;
+  }
+  @media (${breakpoints.extra}) {
   }
 `
 
-const Logo = ({ front }) => {
-  return <StyledLogo front={front}>Jade</StyledLogo>
+const Logo = ({ front, position, mobile }) => {
+  return (
+    <StyledLogo front={front} position={position} mobile={mobile}>
+      Jade
+    </StyledLogo>
+  )
 }
 
 export default Logo

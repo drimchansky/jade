@@ -22,7 +22,6 @@ const NavListStyled = styled.nav`
     font-size: 1.3rem;
     padding: 1.5rem;
     display: block;
-    letter-spacing: 2px;
   }
   @media (${breakpoints.large}) {
     transform: none;
@@ -32,6 +31,7 @@ const NavListStyled = styled.nav`
       justify-content: center;
     }
     a {
+      padding: 1rem 1.5rem;
       color: ${props => (props.front ? colors.white : colors.secondaryTwo)};
     }
   }

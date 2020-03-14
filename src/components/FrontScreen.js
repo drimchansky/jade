@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import { Link } from 'gatsby'
+
+import Logo from './common/Logo'
+
 // custom
 import { breakpoints, colors } from '../utility/variables'
 
@@ -29,6 +32,7 @@ const FrontScreen = () => {
     >
       <FrontScreenStyled>
         <ContainerStyled>
+          <Logo position="absolute" mobile />
           <HeaderStyled>
             Мы создаем <br />
             <span>успешные проекты</span>
@@ -68,12 +72,13 @@ const ContainerStyled = styled.div`
 `
 
 const HeaderStyled = styled.h1`
-  font-size: 8vw;
+  font-size: 9vw;
   color: ${colors.white};
   transform: translateY(30%);
 
   @media (${breakpoints.large}) {
     transform: translateY(0);
+    font-size: 7vw;
   }
 
   & span {
