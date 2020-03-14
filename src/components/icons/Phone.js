@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { colors } from '../../utility/variables'
+import { colors, breakpoints } from '../../utility/variables'
 
 const PhoneStyled = styled.svg`
   height: 30px;
   padding: 4px;
-  fill: ${props => (props.front ? colors.white : colors.secondaryTwo)};
+  fill: ${colors.white};
+
+  @media (${breakpoints.large}) {
+    fill: ${props => (props.front ? colors.white : colors.secondaryTwo)};
+  }
 `
 
 const Phone = ({ front }) => {

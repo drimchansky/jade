@@ -16,7 +16,7 @@ const NavListStyled = styled.nav`
   & li {
   }
   & a {
-    color: ${props => (props.front ? colors.white : colors.secondaryTwo)};
+    color: ${colors.white};
     text-decoration: none;
     font-size: 1.3rem;
     padding: 1.5rem;
@@ -27,6 +27,9 @@ const NavListStyled = styled.nav`
     margin-left: 20px;
     ul {
       flex-direction: row;
+    }
+    a {
+      color: ${props => (props.front ? colors.white : colors.secondaryTwo)};
     }
   }
 `
@@ -39,10 +42,10 @@ const NavList = ({ front }) => {
           <Link to="/">Главнвя</Link>
         </li>
         <li>
-          <Link to="/">Услуги</Link>
+          <Link to="/services">Услуги</Link>
         </li>
         <li>
-          <Link to="/">Работы</Link>
+          <Link to="/works">Работы</Link>
         </li>
         <li>
           <Link to="/about">О нас</Link>

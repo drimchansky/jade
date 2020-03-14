@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { breakpoints } from '../../utility/variables'
+import { breakpoints, colors } from '../../utility/variables'
 
 const StyledHamburger = styled.button`
   position: absolute;
@@ -19,7 +19,7 @@ const StyledHamburger = styled.button`
     width: 80px;
     position: absolute;
     border-radius: 50px;
-    background-color: red;
+    background-color: ${colors.white};
     transform: ${props =>
       props.open
         ? 'translate(-50%,-50%) rotate(135deg);'

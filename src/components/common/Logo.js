@@ -2,15 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-import { colors } from '../../utility/variables'
+import { colors, breakpoints } from '../../utility/variables'
 
 const StyledLogo = styled(Link)`
   font-weight: 900;
   font-size: 2rem;
   align-self: flex-start;
   padding: 2rem;
-  color: ${props => props.front ? colors.white : colors.secondaryTwo};
+  color: ${colors.white};
   text-decoration: none;
+
+  @media (${breakpoints.large}) {
+    color: ${props => (props.front ? colors.white : colors.secondaryTwo)};
+  }
 `
 
 const Logo = ({ front }) => {

@@ -3,15 +3,19 @@ import styled from 'styled-components'
 
 import Phone from '../icons/Phone'
 
-import { colors } from '../../utility/variables'
+import { colors, breakpoints } from '../../utility/variables'
 
 const NumberStyled = styled.span`
   display: flex;
   align-items: center;
-  color: ${props => (props.front ? colors.white : colors.secondaryTwo)};
+  color: ${colors.white};
   font-size: 1.2rem;
   padding: 1rem;
   white-space: nowrap;
+
+  @media (${breakpoints.large}) {
+    color: ${props => (props.front ? colors.white : colors.secondaryTwo)};
+  }
 `
 
 const Number = ({ front }) => {
