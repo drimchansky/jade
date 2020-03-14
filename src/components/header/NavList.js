@@ -1,8 +1,9 @@
+// libraries
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-
-import { colors, breakpoints } from '../../utility/variables'
+// custom
+import { breakpoints, colors } from '../../utility/variables'
 
 const NavListStyled = styled.nav`
   width: 100%;
@@ -15,11 +16,11 @@ const NavListStyled = styled.nav`
   & li {
   }
   & a {
+    color: ${props => (props.front ? colors.white : colors.secondaryTwo)};
     text-decoration: none;
     font-size: 1.3rem;
     padding: 1.5rem;
     display: block;
-    color: red;
   }
   @media (${breakpoints.large}) {
     transform: none;
@@ -30,9 +31,9 @@ const NavListStyled = styled.nav`
   }
 `
 
-const NavList = () => {
+const NavList = ({ front }) => {
   return (
-    <NavListStyled>
+    <NavListStyled front={front}>
       <ul>
         <li>
           <Link to="/">Главнвя</Link>

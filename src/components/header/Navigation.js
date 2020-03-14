@@ -29,11 +29,10 @@ const NavigationStyled = styled.div`
   }
 
   @media (${breakpoints.large}) {
-    position: relative;
     height: auto;
     width: 100%;
     opacity: 1;
-    position: relative;
+    position: ${props => (props.front ? 'absolute' : 'relative')};
     transform: none;
     clip-path: none;
     background: transparent;
@@ -41,15 +40,17 @@ const NavigationStyled = styled.div`
     max-width: 1400px;
     margin: 0 auto;
     align-items: center;
+    left: ${props => (props.front ? '50%' : '')};
+    transform: ${props => (props.front ? 'translateX(-50%)' : '')};
   }
 `
 
-const Navigation = ({ open }) => {
+const Navigation = ({ open, front }) => {
   return (
-    <NavigationStyled open={open}>
-      <Logo />
-      <NavList />
-      <Number />
+    <NavigationStyled open={open} front={front}>
+      <Logo front={front} />
+      <NavList front={front} />
+      <Number front={front} />
     </NavigationStyled>
   )
 }

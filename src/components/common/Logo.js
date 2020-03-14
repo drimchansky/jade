@@ -9,12 +9,12 @@ const StyledLogo = styled(Link)`
   font-size: 2rem;
   align-self: flex-start;
   padding: 2rem;
-  color: red;
+  color: ${props => props.front ? colors.white : colors.secondaryTwo};
   text-decoration: none;
 `
 
-const Logo = () => {
-  return <StyledLogo>Jade</StyledLogo>
+const Logo = ({ front }) => {
+  return <StyledLogo front={front}>Jade</StyledLogo>
 }
 
 export default Logo

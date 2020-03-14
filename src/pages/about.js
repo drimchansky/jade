@@ -1,8 +1,8 @@
+// libraries
 import React from 'react'
-
+// components
 import Page from '../components/page/Page'
 import SEO from '../components/page/SEO'
-import Header from '../components/header/Header'
 
 export default () => {
   return (

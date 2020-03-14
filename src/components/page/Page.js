@@ -4,7 +4,7 @@ import { useMatch } from '@reach/router'
 import GlobalStyles from './GlobalStyles'
 import Header from '../header/Header'
 
-const Layout = ({ children }) => {
+const Page = ({ children }) => {
   const match = useMatch('/')
 
   return (
@@ -16,4 +16,4 @@ const Layout = ({ children }) => {
   )
 }
 
-export default Layout
+export default Page
