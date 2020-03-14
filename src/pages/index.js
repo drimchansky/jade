@@ -8,9 +8,7 @@ export default () => {
   return (
     <>
       <SEO title="Главная" />
-      <Page>
-        <Header />
-      </Page>
+      <Page></Page>
     </>
   )
 }

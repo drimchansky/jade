@@ -4,35 +4,6 @@ import { fonts } from '../../utility/variables'
 
 const GlobalStyles = createGlobalStyle`
 
-/* m-plus-1p-regular - latin_cyrillic */
-@font-face {
-  font-family: 'M PLUS 1p';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../../assets/fonts/m-plus-1p-v19-latin_cyrillic-regular.eot'); 
-  src: local('M PLUS 1p'), local('MPLUS1p-Regular'),
-       url('../../assets/fonts/m-plus-1p-v19-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), 
-       url('../../assets/fonts/m-plus-1p-v19-latin_cyrillic-regular.woff2') format('woff2'),
-       url('../../assets/fonts/m-plus-1p-v19-latin_cyrillic-regular.woff') format('woff'), 
-       url('../../assets/fonts/m-plus-1p-v19-latin_cyrillic-regular.ttf') format('truetype'), 
-       url('../../assets/fonts/m-plus-1p-v19-latin_cyrillic-regular.svg#MPLUS1p') format('svg'); 
-}
-
-/* m-plus-1p-700 - latin_cyrillic */
-@font-face {
-  font-family: 'M PLUS 1p';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../../assets/fonts/m-plus-1p-v19-latin_cyrillic-700.eot'); 
-  src: local('M PLUS 1p Bold'), local('MPLUS1p-Bold'),
-       url('../../assets/fonts/m-plus-1p-v19-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), 
-       url('../../assets/fonts/m-plus-1p-v19-latin_cyrillic-700.woff2') format('woff2'), 
-       url('../../assets/fonts/m-plus-1p-v19-latin_cyrillic-700.woff') format('woff'), 
-       url('../../assets/fonts/m-plus-1p-v19-latin_cyrillic-700.ttf') format('truetype'), 
-       url('../../assets/fonts/m-plus-1p-v19-latin_cyrillic-700.svg#MPLUS1p') format('svg'); 
-}
-
-
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
