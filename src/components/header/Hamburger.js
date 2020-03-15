@@ -6,7 +6,12 @@ import { breakpoints, colors } from '../../utility/variables'
 
 const Hamburger = ({ open, setOpen }) => {
   return (
-    <StyledHamburger open={open} onClick={() => setOpen(!open)}>
+    <StyledHamburger
+      aria-label="Hamburger menu"
+      type="button"
+      open={open}
+      onClick={() => setOpen(!open)}
+    >
       <span></span>
     </StyledHamburger>
   )

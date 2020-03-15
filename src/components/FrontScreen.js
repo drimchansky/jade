@@ -44,7 +44,7 @@ const FrontScreen = () => {
 }
 
 const FrontScreenStyled = styled.div`
-  background-color: rgba(58, 4, 117, 0.83);
+  background-color: rgba(58, 4, 117, 0.85);
   min-height: 10px;
   width: 100%;
   background-position: bottom center;
