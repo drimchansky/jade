@@ -31,8 +31,6 @@ const StyledLogo = styled(Link)`
     z-index: ${props => (props.mobile ? '-1' : '1')};
     padding-left: 0.5rem;
   }
-  @media (${breakpoints.extra}) {
-  }
 `
 
 export default Logo

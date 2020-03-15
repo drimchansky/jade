@@ -47,8 +47,7 @@ const NavListStyled = styled.nav`
     flex-direction: column;
     align-items: center;
   }
-  & li {
-  }
+  
   & a {
     position: relative;
     color: ${colors.white};

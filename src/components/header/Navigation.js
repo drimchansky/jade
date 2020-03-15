@@ -41,7 +41,6 @@ const NavigationStyled = styled.div`
     opacity: 1;
     padding: 1rem 0;
     position: ${props => (props.front ? 'absolute' : 'relative')};
-    transform: none;
     clip-path: none;
     background: transparent;
     flex-direction: row;

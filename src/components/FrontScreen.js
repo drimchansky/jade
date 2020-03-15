@@ -27,7 +27,7 @@ const FrontScreen = () => {
     <BackgroundImage
       Tag="section"
       fluid={imageData}
-      backgroundColor={`#040e18`}
+      backgroundColor={`rgb(58, 4, 117)`}
     >
       <FrontScreenStyled>
         <ContainerStyled>
@@ -99,22 +99,6 @@ const LinkStyled = styled(Link)`
   padding-right: 5.5rem;
   margin-right: 20%;
 
-  &:focus {
-    outline: none;
-  }
-
-  &:hover:after,
-  &:focus:after {
-    background: ${colors.white};
-    color: ${colors.secondaryFour};
-  }
-
-  @media (${breakpoints.large}) {
-    transform: translateY(15%);
-    margin-right: 40%;
-    margin-top: 4rem;
-  }
-
   &:before {
     content: '';
     position: absolute;
@@ -142,6 +126,22 @@ const LinkStyled = styled(Link)`
     line-height: 1.8rem;
     text-align: center;
     background: rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover:after,
+  &:focus:after {
+    background: ${colors.white};
+    color: ${colors.secondaryFour};
+  }
+
+  @media (${breakpoints.large}) {
+    transform: translateY(15%);
+    margin-right: 40%;
+    margin-top: 4rem;
   }
 `
 
