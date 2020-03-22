@@ -6,7 +6,7 @@ const breakpoints = {
 }
 
 const colors = {
-  primary: '#F61067',
+  primary: '#F61055',
   secondaryOne: '#5E239D',
   secondaryTwo: '#3A0475',
   secondaryThree: '#30124E',

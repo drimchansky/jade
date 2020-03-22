@@ -47,12 +47,12 @@ const NavListStyled = styled.nav`
     flex-direction: column;
     align-items: center;
   }
-  
+
   & a {
     position: relative;
     color: ${colors.white};
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     padding: 1.5rem;
     display: block;
 

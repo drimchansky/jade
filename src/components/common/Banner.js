@@ -24,7 +24,7 @@ const Banner = ({ text }) => {
     <BackgroundImage
       Tag="section"
       fluid={imageData}
-      backgroundColor={`rgb(58, 4, 117)`}
+      backgroundColor={`rgba(37, 3, 74, 0.8)`}
     >
       <BannerStyled>
         <ContainerStyled>

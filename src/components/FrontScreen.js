@@ -6,6 +6,7 @@ import BackgroundImage from 'gatsby-background-image'
 import { Link } from 'gatsby'
 //components
 import Logo from './common/Logo'
+import arrow from '../assets/icons/next.png'
 // custom
 import { breakpoints, colors } from '../utility/variables'
 
@@ -27,7 +28,7 @@ const FrontScreen = () => {
     <BackgroundImage
       Tag="section"
       fluid={imageData}
-      backgroundColor={`rgb(58, 4, 117)`}
+      backgroundColor={`rgba(37, 3, 74, 0.8)`}
     >
       <FrontScreenStyled>
         <ContainerStyled>
@@ -44,7 +45,7 @@ const FrontScreen = () => {
 }
 
 const FrontScreenStyled = styled.div`
-  background-color: rgba(58, 4, 117, 0.85);
+  background-color: rgba(37, 3, 74, 0.8);
   min-height: 10px;
   width: 100%;
   background-position: bottom center;
@@ -106,11 +107,11 @@ const LinkStyled = styled(Link)`
     bottom: 0;
     right: 0;
     left: -1000px;
-    border: 0.5px solid ${colors.white};
+    border: 1px solid ${colors.white};
   }
 
   &:after {
-    content: '→';
+    content: '';
     position: absolute;
     right: 1rem;
     top: 50%;
@@ -125,17 +126,13 @@ const LinkStyled = styled(Link)`
     vertical-align: middle;
     line-height: 1.8rem;
     text-align: center;
-    background: rgba(0, 0, 0, 0.1);
+    background: url(${arrow}) no-repeat;
+    background-size: 40%;
+    background-position: center center;
   }
 
   &:focus {
     outline: none;
-  }
-
-  &:hover:after,
-  &:focus:after {
-    background: ${colors.white};
-    color: ${colors.secondaryFour};
   }
 
   @media (${breakpoints.large}) {

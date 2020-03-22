@@ -4,6 +4,7 @@ import { createGlobalStyle } from 'styled-components'
 import { fonts, breakpoints } from '../../utility/variables'
 
 const GlobalStyles = createGlobalStyle`
+
 html {
   line-height: 1.15; /* 1 */
   overflow-x: hidden; 
