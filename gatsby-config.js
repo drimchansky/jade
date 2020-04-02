@@ -1,4 +1,5 @@
 const path = require(`path`)
+require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
@@ -6,7 +7,9 @@ module.exports = {
     description: 'Awesome description',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-react-helmet`,
+    },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -20,7 +23,18 @@ module.exports = {
         path: path.join(__dirname, `src`, `assets`, 'images'),
       },
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+    },
+    {
+      resolve: `gatsby-transformer-sharp`,
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
   ],
 }
