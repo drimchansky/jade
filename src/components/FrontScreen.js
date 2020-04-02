@@ -11,32 +11,40 @@ import arrow from '../assets/icons/next.png'
 import { breakpoints, colors } from '../utility/variables'
 
 const FrontScreen = () => {
-  const data = useStaticQuery(graphql`
+  const contentfulData = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "plant.jpg" }) {
-        childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
-            ...GatsbyImageSharpFluid_withWebp
+      allContentfulGeneral {
+        nodes {
+          frontBgImage {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyContentfulFluid_withWebp
+            }
+          }
+          frontHeader {
+            content {
+              content {
+                value
+              }
+            }
           }
         }
       }
     }
   `)
-  const imageData = data.file.childImageSharp.fluid
+  const imageData = contentfulData.allContentfulGeneral.nodes[0].frontBgImage.fluid
+
+  const createHeader = () => {
+    const header =
+      contentfulData.allContentfulGeneral.nodes[0].frontHeader.content[0].content[0].value
+    return { __html: header }
+  }
 
   return (
-    <BackgroundImage
-      Tag="section"
-      fluid={imageData}
-      backgroundColor={`rgba(37, 3, 74, 0.8)`}
-    >
+    <BackgroundImage Tag="section" fluid={imageData} backgroundColor={`rgba(37, 3, 74, 0.8)`}>
       <FrontScreenStyled>
         <ContainerStyled>
           <Logo position="absolute" mobile={1} />
-          <HeaderStyled>
-            Мы создаем <br />
-            <span>успешные проекты</span>
-          </HeaderStyled>
+          <HeaderStyled dangerouslySetInnerHTML={createHeader()}></HeaderStyled>
           <LinkStyled to="/contacts">Свяжитесь с нами</LinkStyled>
         </ContainerStyled>
       </FrontScreenStyled>

@@ -20,6 +20,7 @@ const SEO = ({ title }) => {
       <html lang="ru" />
       <meta name="theme-color" content="#191919" />
       <meta name="description" content={data.site.siteMetadata.description} />
+      <link rel="preconnect" href="http://images.ctfassets.net" />
     </Helmet>
   )
 }
