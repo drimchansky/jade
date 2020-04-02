@@ -7,7 +7,7 @@ import { colors, breakpoints } from '../../utility/variables'
 
 const Logo = ({ front, position, mobile }) => {
   return (
-    <StyledLogo front={front} position={position} mobile={mobile}>
+    <StyledLogo to="/" front={front} position={position} mobile={mobile}>
       Jade
     </StyledLogo>
   )

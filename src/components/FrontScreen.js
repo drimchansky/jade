@@ -32,7 +32,7 @@ const FrontScreen = () => {
     >
       <FrontScreenStyled>
         <ContainerStyled>
-          <Logo position="absolute" mobile />
+          <Logo position="absolute" mobile={1} />
           <HeaderStyled>
             Мы создаем <br />
             <span>успешные проекты</span>

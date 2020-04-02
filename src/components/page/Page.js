@@ -10,7 +10,7 @@ const Page = ({ children }) => {
   return (
     <>
       <GlobalStyles />
-      <Header front={match ? true : false} />
+      <Header front={match ? 1 : 0} />
       <>{children}</>
     </>
   )
