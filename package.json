@@ -13,14 +13,14 @@
     "lint:css": "stylelint ./src/**/*.js"
   },
   "dependencies": {
-    "gatsby": "^2.20.2",
+    "gatsby": "^2.20.10",
     "gatsby-background-image": "^0.10.2",
-    "gatsby-image": "^2.3.0",
-    "gatsby-plugin-react-helmet": "^3.2.0",
-    "gatsby-plugin-sharp": "^2.5.1",
-    "gatsby-plugin-styled-components": "^3.2.0",
-    "gatsby-source-filesystem": "^2.2.1",
-    "gatsby-transformer-sharp": "^2.4.1",
+    "gatsby-image": "^2.3.1",
+    "gatsby-plugin-react-helmet": "^3.2.1",
+    "gatsby-plugin-sharp": "^2.5.3",
+    "gatsby-plugin-styled-components": "^3.2.1",
+    "gatsby-source-filesystem": "^2.2.2",
+    "gatsby-transformer-sharp": "^2.4.3",
     "intersection-observer": "^0.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -33,5 +33,21 @@
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0"
+  },
+  "stylelint": {
+    "processors": [
+      "stylelint-processor-styled-components"
+    ],
+    "extends": [
+      "stylelint-config-recommended",
+      "stylelint-config-styled-components"
+    ]
+  },
+  "prettier": {
+    "endOfLine": "lf",
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5"
   }
 }
