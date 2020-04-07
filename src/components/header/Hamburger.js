@@ -36,9 +36,7 @@ const StyledHamburger = styled.button`
     border-radius: 50px;
     background-color: ${colors.white};
     transform: ${props =>
-      props.open
-        ? 'translate(-50%,-50%) rotate(135deg);'
-        : 'translate(-50%, -50%) rotate(0deg)'};
+      props.open ? 'translate(-50%,-50%) rotate(135deg);' : 'translate(-50%, -50%) rotate(0deg)'};
     transition: all ease 0.5s;
 
     &::before,
@@ -57,16 +55,14 @@ const StyledHamburger = styled.button`
       ${props => (props.open ? '' : '')};
       top: ${props => (props.open ? '0' : '-20px')};
       left: 0;
-      transform: ${props =>
-        props.open ? 'translateX(100%) rotate(-90deg);' : ''};
+      transform: ${props => (props.open ? 'translateX(100%) rotate(-90deg);' : '')};
       transform-origin: left;
     }
 
     &::after {
       bottom: ${props => (props.open ? '0' : '-20px')};
       right: 0;
-      transform: ${props =>
-        props.open ? 'translateX(-100%) rotate(-90deg);' : ''};
+      transform: ${props => (props.open ? 'translateX(-100%) rotate(-90deg);' : '')};
       transform-origin: right;
     }
   }

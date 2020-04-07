@@ -1,9 +1,10 @@
-// libraries imports
+// libraries
 import React from 'react'
-// components imports
+// components
 import Page from '../components/page/Page'
 import SEO from '../components/page/SEO'
 import FrontScreen from '../components/FrontScreen'
+import Cards from '../components/Cards'
 
 export default () => {
   return (
@@ -11,6 +12,7 @@ export default () => {
       <SEO title="Главная" />
       <Page>
         <FrontScreen />
+        <Cards />
       </Page>
     </>
   )
