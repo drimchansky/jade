@@ -2,14 +2,14 @@
 import React from 'react'
 import styled from 'styled-components'
 //components
-import Phone from '../icons/Phone'
+import { Phone } from './SVGIcons'
 // custom
 import { colors, breakpoints } from '../../utility/variables'
 
 const Number = ({ frontPage }) => {
   return (
     <NumberStyled frontPage={frontPage}>
-      <Phone frontPage={frontPage} />
+      <Phone size="26px" fill={frontPage ? colors.white : colors.secondaryTwo} />
       (01) 666 - 693 - 456
     </NumberStyled>
   )

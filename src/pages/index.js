@@ -2,6 +2,7 @@
 import React from 'react'
 // components
 import Page from '../components/utility/Page'
+import Logo from '../components/common/Logo'
 import SEO from '../components/utility/SEO'
 import FrontScreen from '../components/home/FrontScreen'
 import Cards from '../components/home/Cards'
@@ -13,6 +14,7 @@ export default () => {
     <>
       <SEO title="Главная" />
       <Page>
+        <Logo position="absolute" mobile="true" />
         <FrontScreen />
         <Cards />
         <Mailing />
