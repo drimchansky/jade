@@ -85,7 +85,6 @@ const CardsStyled = styled.div`
     flex-direction: column;
     margin: 1rem;
     flex: 1;
-    transition: background 0.3s;
     border-radius: 4px;
 
     @media (min-width: 768px) {
@@ -96,11 +95,7 @@ const CardsStyled = styled.div`
       }
 
       &:hover {
-        background: ${colors.secondaryTwo};
-
-        & * {
-          color: ${colors.white};
-        }
+        box-shadow: 5px 20px 50px rgba(102, 51, 153, 0.2);
       }
 
       &:first-child {
