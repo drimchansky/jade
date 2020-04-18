@@ -30,6 +30,10 @@ const Section = styled.section`
   align-items: center;
   flex-direction: column;
   padding: 3rem 10px;
+
+  @media (min-width: 992px) {
+    padding-bottom: 8rem;
+  }
 `
 
 const Title = styled.h4`
@@ -43,6 +47,10 @@ const Subtitle = styled.span`
   color: ${colors.secondaryTwo};
   margin-top: 1rem;
   text-align: center;
+
+  @media (min-width: 576px) {
+    margin-top: 1.5rem;
+  }
 `
 
 const WrapperStyled = styled.div`
@@ -56,6 +64,7 @@ const WrapperStyled = styled.div`
     border-bottom: 2px solid ${colors.lightGrey};
     flex-direction: row;
     height: 54px;
+    margin-top: 2rem;
   }
 
   & input {
