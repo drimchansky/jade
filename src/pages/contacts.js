@@ -1,8 +1,8 @@
 // libraries
 import React from 'react'
 // components
-import Page from '../components/page/Page'
-import SEO from '../components/page/SEO'
+import Page from '../components/utility/Page'
+import SEO from '../components/utility/SEO'
 import Logo from '../components/common/Logo'
 import Banner from '../components/common/Banner'
 

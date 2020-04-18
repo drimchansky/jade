@@ -21,11 +21,7 @@ const Banner = ({ text }) => {
   const imageData = data.file.childImageSharp.fluid
 
   return (
-    <BackgroundImage
-      Tag="section"
-      fluid={imageData}
-      backgroundColor={`rgba(37, 3, 74, 0.8)`}
-    >
+    <BackgroundImage Tag="section" fluid={imageData} backgroundColor={`rgba(37, 3, 74, 0.8)`}>
       <BannerStyled>
         <ContainerStyled>
           <HeaderStyled>{text}</HeaderStyled>
@@ -40,7 +36,7 @@ const BannerStyled = styled.div`
   background-color: rgba(58, 4, 117, 0.7);
 
   @media (${breakpoints.large}) {
-    height: 250px;
+    height: 150px;
   }
 `
 

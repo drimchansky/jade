@@ -3,7 +3,7 @@ import React from 'react'
 import { useMatch } from '@reach/router'
 // components
 import GlobalStyles from './GlobalStyles'
-import Header from '../header/Header'
+import Header from '../common/Header'
 
 const Page = ({ children }) => {
   const match = useMatch('/')

@@ -5,10 +5,10 @@ import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import { Link } from 'gatsby'
 //components
-import Logo from './common/Logo'
-import arrow from '../assets/icons/next.png'
+import Logo from '../common/Logo'
+import arrow from '../../assets/icons/next.png'
 // custom
-import { breakpoints, colors } from '../utility/variables'
+import { breakpoints, colors } from '../../utility/variables'
 
 const FrontScreen = () => {
   const contentfulData = useStaticQuery(graphql`

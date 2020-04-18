@@ -73,8 +73,7 @@ const NavListStyled = styled.nav`
       background: ${colors.white};
 
       @media (${breakpoints.large}) {
-        background: ${props =>
-          props.front ? colors.white : colors.secondaryTwo};
+        background: ${props => (props.front ? colors.white : colors.secondaryTwo)};
       }
     }
   }

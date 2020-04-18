@@ -2,7 +2,7 @@
 import React from 'react'
 import styled from 'styled-components'
 // components
-import Logo from '../common/Logo'
+import Logo from './Logo'
 import NavList from './NavList'
 import Number from './Number'
 // custom

@@ -2,7 +2,7 @@
 import React from 'react'
 import styled from 'styled-components'
 // custom
-import { colors } from '../utility/variables'
+import { colors } from '../../utility/variables'
 
 const Cards = () => {
   return (
