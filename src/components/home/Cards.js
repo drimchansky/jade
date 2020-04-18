@@ -48,7 +48,7 @@ const CardsStyled = styled.div`
   color: ${colors.secondaryThree};
 
   @media (min-width: 768px) {
-    padding: 8rem 0.5rem;
+    padding: 8rem 0.5rem 3rem;
   }
 
   & h2 {
