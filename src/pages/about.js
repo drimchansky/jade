@@ -2,6 +2,7 @@
 import React from 'react'
 // components
 import Page from '../components/utility/Page'
+import Header from '../components/common/Header'
 import SEO from '../components/utility/SEO'
 import Logo from '../components/common/Logo'
 import Banner from '../components/common/Banner'
@@ -15,7 +16,8 @@ export default () => {
     <>
       <SEO title="О нас" />
       <Page>
-        <Logo position="absolute" mobile={1} />
+        <Logo position="absolute" mobile="true" />
+        <Header />
         <Banner text="О нас" />
         <Team />
         <TeamSlider />

@@ -5,13 +5,13 @@ import { Link } from 'gatsby'
 // custom
 import { breakpoints, colors } from '../../utility/variables'
 
-const NavList = ({ front, open, setOpen }) => {
+const NavList = ({ frontPage, open, setOpen }) => {
   const clickHandler = e => {
     setOpen(!open)
   }
 
   return (
-    <NavListStyled front={front}>
+    <NavListStyled frontPage={frontPage}>
       <ul>
         <li>
           <Link to="/" onClick={clickHandler}>
@@ -73,7 +73,7 @@ const NavListStyled = styled.nav`
       background: ${colors.white};
 
       @media (${breakpoints.large}) {
-        background: ${props => (props.front ? colors.white : colors.secondaryTwo)};
+        background: ${props => (props.frontPage ? colors.white : colors.secondaryTwo)};
       }
     }
   }
@@ -87,7 +87,7 @@ const NavListStyled = styled.nav`
     }
     a {
       padding: 1rem 1.5rem;
-      color: ${props => (props.front ? colors.white : colors.secondaryTwo)};
+      color: ${props => (props.frontPage ? colors.white : colors.secondaryTwo)};
     }
   }
 `

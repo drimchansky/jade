@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import { Link } from 'gatsby'
 //components
-import Logo from '../common/Logo'
+import Header from '../common/Header'
 import arrow from '../../assets/icons/next.png'
 // custom
 import { breakpoints, colors } from '../../utility/variables'
@@ -43,7 +43,7 @@ const FrontScreen = () => {
     <BackgroundImage Tag="section" fluid={imageData} backgroundColor={`rgba(37, 3, 74, 0.8)`}>
       <FrontScreenStyled>
         <ContainerStyled>
-          <Logo position="absolute" mobile={1} />
+          <Header frontPage />
           <HeaderStyled dangerouslySetInnerHTML={createHeader()}></HeaderStyled>
           <LinkStyled to="/contacts">Свяжитесь с нами</LinkStyled>
         </ContainerStyled>

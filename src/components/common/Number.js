@@ -6,10 +6,10 @@ import Phone from '../icons/Phone'
 // custom
 import { colors, breakpoints } from '../../utility/variables'
 
-const Number = ({ front }) => {
+const Number = ({ frontPage }) => {
   return (
-    <NumberStyled front={front}>
-      <Phone front={front} />
+    <NumberStyled frontPage={frontPage}>
+      <Phone frontPage={frontPage} />
       (01) 666 - 693 - 456
     </NumberStyled>
   )
@@ -24,7 +24,7 @@ const NumberStyled = styled.span`
   white-space: nowrap;
 
   @media (${breakpoints.large}) {
-    color: ${props => (props.front ? colors.white : colors.secondaryTwo)};
+    color: ${props => (props.frontPage ? colors.white : colors.secondaryTwo)};
   }
 `
 

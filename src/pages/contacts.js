@@ -2,8 +2,9 @@
 import React from 'react'
 // components
 import Page from '../components/utility/Page'
-import SEO from '../components/utility/SEO'
 import Logo from '../components/common/Logo'
+import Header from '../components/common/Header'
+import SEO from '../components/utility/SEO'
 import Banner from '../components/common/Banner'
 
 export default () => {
@@ -11,7 +12,8 @@ export default () => {
     <>
       <SEO title="Наши контакты" />
       <Page>
-        <Logo position="absolute" mobile={1} />
+        <Logo position="absolute" mobile="true" />
+        <Header />
         <Banner text="Связь с нами" image="laptop" />
       </Page>
     </>

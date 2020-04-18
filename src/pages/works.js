@@ -2,8 +2,9 @@
 import React from 'react'
 // components
 import Page from '../components/utility/Page'
-import SEO from '../components/utility/SEO'
 import Logo from '../components/common/Logo'
+import Header from '../components/common/Header'
+import SEO from '../components/utility/SEO'
 import Banner from '../components/common/Banner'
 import WorksStats from '../components/works/WorksStats'
 import WorksGallery from '../components/works/WorksGallery'
@@ -15,7 +16,8 @@ export default () => {
     <>
       <SEO title="Наши работы" />
       <Page>
-        <Logo position="absolute" mobile={1} />
+        <Header />
+        <Logo position="absolute" mobile="true" />
         <Banner text="Наши работы" />
         <WorksStats />
         <WorksGallery />

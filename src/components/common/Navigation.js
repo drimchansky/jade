@@ -8,12 +8,12 @@ import Number from './Number'
 // custom
 import { colors, breakpoints } from '../../utility/variables'
 
-const Navigation = ({ open, front, setOpen }) => {
+const Navigation = ({ open, setOpen, frontPage }) => {
   return (
-    <NavigationStyled open={open} front={front}>
-      <Logo front={front} />
-      <NavList front={front} open={open} setOpen={setOpen} />
-      <Number front={front} />
+    <NavigationStyled open={open} frontPage={frontPage}>
+      <Logo frontPage={frontPage} />
+      <NavList open={open} setOpen={setOpen} frontPage={frontPage} />
+      <Number frontPage={frontPage} />
     </NavigationStyled>
   )
 }
@@ -40,16 +40,16 @@ const NavigationStyled = styled.div`
     visibility: visible;
     opacity: 1;
     padding: 1rem 0;
-    position: ${props => (props.front ? 'absolute' : 'relative')};
-    clip-path: none;
+    position: ${props => (props.frontPage ? 'absolute' : 'relative')};
+    top: 0;
+    left: ${props => (props.frontPage ? '50%' : '0')};
+    transform: ${props => (props.frontPage ? 'translateX(-50%)' : 'none')};
     background: transparent;
     flex-direction: row;
     max-width: 1400px;
     margin: 0 auto;
     z-index: 10;
     align-items: center;
-    left: ${props => (props.front ? '50%' : '')};
-    transform: ${props => (props.front ? 'translateX(-50%)' : '')};
   }
 `
 
