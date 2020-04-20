@@ -138,19 +138,24 @@ const Title = styled.span`
 
 const Social = styled.div`
   margin-top: 1rem;
+  text-align: center;
 
   @media (min-width: 576px) {
+    text-align: left;
     margin-top: 0;
     margin-left: auto;
   }
 
   & ul {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 1rem;
   }
 
   & li {
+    & a {
+      padding: 0.5rem;
+    }
   }
 `
 
