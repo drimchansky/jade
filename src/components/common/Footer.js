@@ -97,6 +97,7 @@ const List = styled.div`
 
   @media (min-width: 576px) {
     margin-left: 2rem;
+    text-align: left;
   }
 
   & ul {
