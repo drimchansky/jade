@@ -45,7 +45,7 @@ const Info = styled.div`
 
   & ul {
     @media (min-width: 960px) {
-      padding: 8rem 0;
+      margin-top: 8rem;
     }
   }
 
