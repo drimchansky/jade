@@ -40,10 +40,10 @@ const NavigationStyled = styled.div`
     visibility: visible;
     opacity: 1;
     padding: 1rem 0;
-    position: ${props => (props.frontPage ? 'absolute' : 'relative')};
+    position: ${props => (props.frontpage ? 'absolute' : 'relative')};
     top: 0;
-    left: ${props => (props.frontPage ? '50%' : '0')};
-    transform: ${props => (props.frontPage ? 'translateX(-50%)' : 'none')};
+    left: ${props => (props.frontpage ? '50%' : '0')};
+    transform: ${props => (props.frontpage ? 'translateX(-50%)' : 'none')};
     background: transparent;
     flex-direction: row;
     max-width: 1400px;

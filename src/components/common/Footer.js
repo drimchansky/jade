@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <FooterStyled>
       <Container>
-        <Logo frontPage />
+        <Logo frontpage="true" />
 
         <List>
           <Title>Меню</Title>

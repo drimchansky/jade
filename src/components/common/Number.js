@@ -25,7 +25,7 @@ const NumberStyled = styled.span`
   white-space: nowrap;
 
   @media (${breakpoints.large}) {
-    color: ${props => (props.frontPage ? colors.white : colors.secondaryTwo)};
+    color: ${props => (props.frontpage ? colors.white : colors.secondaryTwo)};
   }
 `
 
