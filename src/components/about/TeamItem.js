@@ -1,6 +1,7 @@
 // libraries
 import React from 'react'
 import styled from 'styled-components'
+import { IconButton } from '@material-ui/core'
 // components
 import { Codepen, Twitter, Dribble } from '../common/SVGIcons'
 // custom
@@ -18,19 +19,19 @@ const TeamItem = ({ img, name, position }) => {
       </Info>
       <Social>
         <li>
-          <a href="/">
+          <IconButton href="/#">
             <Twitter fill="#00A8F0" size="24px" />
-          </a>
+          </IconButton>
         </li>
         <li>
-          <a href="/">
+          <IconButton href="/#">
             <Dribble fill="#F61067" size="24px" />
-          </a>
+          </IconButton>
         </li>
         <li>
-          <a href="/">
+          <IconButton href="/#">
             <Codepen size="24px" />
-          </a>
+          </IconButton>
         </li>
       </Social>
     </ItemStyled>

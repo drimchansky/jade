@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Grid, Container } from '@material-ui/core'
 // components
 import TeamItem from './TeamItem'
+import Caption from '../common/Caption'
 // custom
 import { colors } from '../../utility/variables'
 
@@ -21,13 +22,11 @@ const Team = () => {
   return (
     <Section>
       <Container maxWidth="lg">
-        <Title>
-          <h2>Наша команда</h2>
-          <span>
-            Хотя Lorem ipsum напоминает классический латинский, вы не найдете никакого смысла в
-            сказанном.
-          </span>
-        </Title>
+        <Caption
+          title="Наша команда"
+          subtitle="Хотя Lorem ipsum напоминает классический латинский, вы не найдете никакого смысла в
+            сказанном."
+        />
         <GridStyled container spacing={5}>
           {data.map(item => {
             return (
@@ -45,33 +44,6 @@ const Team = () => {
 const Section = styled.section`
   @media (min-width: 960px) {
     background: linear-gradient(0deg, ${colors.secondaryFour} 67%, #fff 0);
-  }
-`
-
-const Title = styled.div`
-  text-align: center;
-  padding: 2rem 0 1rem 0;
-  color: ${colors.secondaryTwo};
-  max-width: 600px;
-  margin: 0 auto;
-
-  @media (min-width: 600px) {
-    padding: 3rem 0 2rem 0;
-  }
-
-  & h2 {
-    font-size: 1.8rem;
-
-    @media (min-width: 960px) {
-      font-size: 2.5rem;
-    }
-  }
-
-  & span {
-    font-size: 1rem;
-    display: block;
-    margin-top: 0.5rem;
-    opacity: 0.9;
   }
 `
 
