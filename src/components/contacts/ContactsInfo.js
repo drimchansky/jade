@@ -45,13 +45,17 @@ const Info = styled.div`
 
   & ul {
     @media (min-width: 960px) {
-      margin-top: 8rem;
+      margin-top: 5rem;
     }
   }
 
   & li {
     position: relative;
     margin-top: 1rem;
+
+    @media (min-width: 960px) {
+      margin-top: 2rem;
+    }
   }
 
   & span {
@@ -59,6 +63,10 @@ const Info = styled.div`
     display: block;
     font-size: 1.1rem;
     margin-bottom: 0.3rem;
+
+    @media (min-width: 960px) {
+      margin-bottom: 1rem;
+    }
   }
 
   & small {

@@ -33,7 +33,7 @@ const BG = styled(BackgroundImage)`
     display: block;
     background: #000;
     height: 100%;
-    height: 1224px;
+    height: 1000px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

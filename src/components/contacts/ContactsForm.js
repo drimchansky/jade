@@ -54,10 +54,11 @@ const ContactsForm = () => {
 const Title = styled.span`
   display: block;
   padding: 0.5rem 0 1rem 0;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: ${colors.secondaryFour};
 
   @media (min-width: 960px) {
+    font-size: 1.4rem;
     margin-bottom: 1.5rem;
     color: ${colors.white};
   }
@@ -68,12 +69,19 @@ const Form = styled.form`
   padding: 1rem 0.5rem;
 
   @media (min-width: 960px) {
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 5rem 3.5rem;
-    max-width: 1000px;
-    background: ${colors.secondaryThree};
+    width: 900px;
+    background: ${colors.secondaryFour};
   }
 `
-//  Overwriting MaterialUI styles. IMPORTANT justified
+//
+//  *Overwriting MaterialUI styles. Using IMPORTANT is justified
+//
+
 const TextFieldStyled = styled(TextField)`
   & fieldset {
     @media (min-width: 960px) {
