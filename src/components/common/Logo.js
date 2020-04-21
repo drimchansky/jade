@@ -5,9 +5,9 @@ import { Link } from 'gatsby'
 // custom
 import { colors, breakpoints } from '../../utility/variables'
 
-const Logo = ({ frontPage, position, mobile }) => {
+const Logo = ({ frontpage, position, mobile }) => {
   return (
-    <StyledLogo to="/" frontPage={frontPage} position={position} mobile={mobile}>
+    <StyledLogo to="/" frontpage={frontpage} position={position} mobile={mobile}>
       Jade
     </StyledLogo>
   )
@@ -26,7 +26,7 @@ const StyledLogo = styled(Link)`
   z-index: 999;
 
   @media (${breakpoints.large}) {
-    color: ${props => (props.frontPage ? colors.white : colors.secondaryTwo)};
+    color: ${props => (props.frontpage ? colors.white : colors.secondaryTwo)};
     display: ${props => (props.mobile ? 'none' : 'block')};
     z-index: ${props => (props.mobile ? '-1' : '1')};
     padding-left: 0.5rem;

@@ -6,10 +6,10 @@ import { Phone } from './SVGIcons'
 // custom
 import { colors, breakpoints } from '../../utility/variables'
 
-const Number = ({ frontPage }) => {
+const Number = ({ frontpage }) => {
   return (
-    <NumberStyled frontPage={frontPage}>
-      <Phone size="26px" fill={frontPage ? colors.white : colors.secondaryTwo} />
+    <NumberStyled frontpage={frontpage}>
+      <Phone size="26px" fill={frontpage ? colors.white : colors.secondaryTwo} />
       (01) 666 - 693 - 456
     </NumberStyled>
   )

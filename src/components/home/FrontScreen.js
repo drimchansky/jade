@@ -43,7 +43,7 @@ const FrontScreen = () => {
     <BackgroundImage Tag="section" fluid={imageData} backgroundColor={`rgba(37, 3, 74, 0.8)`}>
       <FrontScreenStyled>
         <ContainerStyled>
-          <Header frontPage />
+          <Header frontpage="true" />
           <HeaderStyled dangerouslySetInnerHTML={createHeader()}></HeaderStyled>
           <LinkStyled to="/contacts">Свяжитесь с нами</LinkStyled>
         </ContainerStyled>

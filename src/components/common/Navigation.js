@@ -8,12 +8,12 @@ import Number from './Number'
 // custom
 import { colors, breakpoints } from '../../utility/variables'
 
-const Navigation = ({ open, setOpen, frontPage }) => {
+const Navigation = ({ open, setOpen, frontpage }) => {
   return (
-    <NavigationStyled open={open} frontPage={frontPage}>
-      <Logo frontPage={frontPage} />
-      <NavList open={open} setOpen={setOpen} frontPage={frontPage} />
-      <Number frontPage={frontPage} />
+    <NavigationStyled open={open} frontpage={frontpage}>
+      <Logo frontpage={frontpage} />
+      <NavList open={open} setOpen={setOpen} frontpage={frontpage} />
+      <Number frontpage={frontpage} />
     </NavigationStyled>
   )
 }
