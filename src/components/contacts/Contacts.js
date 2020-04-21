@@ -12,10 +12,10 @@ const Contacts = () => {
     <Section>
       <Container maxWidth="xl">
         <Grid container>
-          <Grid item xs="12" md="6">
+          <Grid item xs="12" md="5">
             <ContactsInfo />
           </Grid>
-          <Grid item md="6">
+          <Grid item md="7">
             <ContactsBg />
           </Grid>
         </Grid>
