@@ -7,6 +7,7 @@ module.exports = {
     description: 'Awesome description',
   },
   plugins: [
+    `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-plugin-react-helmet`,
     },
