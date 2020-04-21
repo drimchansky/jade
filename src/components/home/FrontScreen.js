@@ -84,6 +84,7 @@ const HeaderStyled = styled.h1`
   color: ${colors.white};
   transform: translateY(30%);
   line-height: 1.3;
+  font-weight: 500;
 
   @media (${breakpoints.large}) {
     transform: translateY(15%);
@@ -100,6 +101,7 @@ const LinkStyled = styled(Link)`
   text-align: right;
   position: relative;
   font-size: 1rem;
+  font-weight: 300;
   color: ${colors.white};
   text-decoration: none;
   margin-top: 3rem;

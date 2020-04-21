@@ -17,7 +17,7 @@ const StyledLogo = styled(Link)`
   position: ${props => props.position || ''};
   left: 0;
   top: 0;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 2rem;
   align-self: flex-start;
   padding: 1rem;

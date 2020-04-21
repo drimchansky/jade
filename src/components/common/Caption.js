@@ -27,6 +27,7 @@ const CaptionStyled = styled.div`
 
   & h2 {
     font-size: 1.8rem;
+    font-weight: 500;
 
     @media (min-width: 960px) {
       font-size: 2.5rem;
@@ -35,6 +36,7 @@ const CaptionStyled = styled.div`
 
   & span {
     font-size: 1rem;
+    font-weight: 300;
     display: block;
     margin-top: 0.5rem;
     opacity: 0.9;

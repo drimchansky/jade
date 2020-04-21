@@ -53,6 +53,7 @@ const NavListStyled = styled.nav`
     color: ${colors.white};
     text-decoration: none;
     font-size: 1.1rem;
+    font-weight: 300;
     padding: 1.5rem;
     display: block;
 

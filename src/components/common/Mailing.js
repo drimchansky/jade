@@ -40,6 +40,7 @@ const Title = styled.h4`
   text-align: center;
   font-size: 2rem;
   color: ${colors.secondaryThree};
+  font-weight: 500;
 `
 
 const Subtitle = styled.span`
@@ -47,6 +48,7 @@ const Subtitle = styled.span`
   color: ${colors.secondaryTwo};
   margin-top: 1rem;
   text-align: center;
+  font-weight: 400;
 
   @media (min-width: 576px) {
     margin-top: 1.5rem;
@@ -84,6 +86,7 @@ const WrapperStyled = styled.div`
 
     &::placeholder {
       color: gray;
+      font-weight: 300;
     }
   }
 
@@ -91,7 +94,7 @@ const WrapperStyled = styled.div`
     cursor: pointer;
     padding: 0.5rem 1rem;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 500;
     margin-top: 1rem;
     display: flex;
     align-items: center;

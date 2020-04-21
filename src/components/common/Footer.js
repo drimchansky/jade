@@ -113,6 +113,7 @@ const List = styled.div`
     font-size: 1.2rem;
     padding: 0.5rem;
     display: block;
+    font-weight: 300;
   }
 `
 
@@ -123,6 +124,7 @@ const Title = styled.span`
   text-transform: uppercase;
   color: ${colors.white};
   text-align: center;
+  font-weight: 500;
 
   &:before {
     position: absolute;
@@ -166,6 +168,7 @@ const Copy = styled.div`
   font-size: 0.8rem;
   color: ${colors.white};
   opacity: 0.9;
+  font-weight: 300;
 `
 
 export default Footer

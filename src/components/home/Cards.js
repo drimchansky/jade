@@ -118,13 +118,14 @@ const CardsStyled = styled.div`
   }
 
   & span {
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1.3rem;
     margin-top: 1rem;
   }
 
   & p {
     font-size: 1rem;
+    font-weight: 300;
   }
 `
 

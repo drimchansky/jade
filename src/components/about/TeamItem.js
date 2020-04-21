@@ -69,7 +69,7 @@ const Info = styled.div`
 
   & > span {
     display: block;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1.3rem;
   }
 
@@ -78,6 +78,7 @@ const Info = styled.div`
     font-size: 1rem;
     opacity: 0.9;
     margin-top: 0.5rem;
+    font-weight: 300;
   }
 `
 

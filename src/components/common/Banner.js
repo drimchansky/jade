@@ -55,6 +55,7 @@ const ContainerStyled = styled.div`
 const HeaderStyled = styled.h2`
   font-size: 1.5rem;
   color: ${colors.white};
+  font-weight: 500;
   padding-left: 1rem;
   padding-bottom: 0.5rem;
 

@@ -20,6 +20,7 @@ const NumberStyled = styled.span`
   align-items: center;
   color: ${colors.white};
   font-size: 1.2rem;
+  font-weight: 300;
   padding: 1rem;
   white-space: nowrap;
 
