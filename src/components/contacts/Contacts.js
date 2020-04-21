@@ -10,12 +10,12 @@ import ContactsBg from './ContactsBg'
 const Contacts = () => {
   return (
     <Section>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" disableGutters>
         <Grid container>
-          <Grid item xs="12" md="5">
+          <Grid item xs={12} md={5}>
             <ContactsInfo />
           </Grid>
-          <Grid item md="7">
+          <Grid item md={7}>
             <ContactsBg />
           </Grid>
         </Grid>

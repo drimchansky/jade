@@ -30,6 +30,7 @@ const ContactsInfo = () => {
 }
 
 const Info = styled.div`
+  color: ${colors.secondaryThree};
   padding: 2rem;
   padding-left: 3rem;
 
@@ -39,7 +40,7 @@ const Info = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 
   & ul {
@@ -71,6 +72,10 @@ const Info = styled.div`
     left: -2rem;
     top: -0.2rem;
     fill: ${colors.secondaryTwo};
+
+    @media (min-width: 960px) {
+      fill: ${colors.primary};
+    }
   }
 `
 

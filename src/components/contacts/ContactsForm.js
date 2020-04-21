@@ -11,8 +11,8 @@ const ContactsForm = () => {
     <Form>
       <Title>Свяжитесь с нами</Title>
       <Grid container>
-        <Grid item xs="12" md="5">
-          <TextField id="name" label="Ваше имя" color="primary" variant="outlined" />
+        <Grid item xs={12} md={7}>
+          <TextField id="name" label="Ваше имя" color="primary" variant="outlined" fullWidth />
           <TextField
             id="email"
             type="email"
@@ -20,9 +20,10 @@ const ContactsForm = () => {
             variant="outlined"
             color="primary"
             margin="normal"
+            fullWidth
           />
         </Grid>
-        <Grid item xs="12" md="7">
+        <Grid item xs={12} md={7}>
           <TextField
             id="textarea"
             multiline
@@ -30,6 +31,7 @@ const ContactsForm = () => {
             variant="outlined"
             color="primary"
             rows={4}
+            fullWidth
           />
         </Grid>
       </Grid>
@@ -54,11 +56,9 @@ const Form = styled.form`
   }
 
   & div {
-    width: 100%;
   }
 
   & input {
-    width: 100%;
     color: ${colors.secondaryThree};
   }
 

@@ -32,11 +32,18 @@ const Banner = ({ text }) => {
 }
 
 const BannerStyled = styled.div`
-  height: 110px;
-  background-color: rgba(58, 4, 117, 0.7);
+  position: relative;
 
-  @media (${breakpoints.large}) {
-    height: 150px;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: ${colors.secondaryOne};
+    mix-blend-mode: multiply;
+    z-index: -1;
   }
 `
 
@@ -56,11 +63,11 @@ const HeaderStyled = styled.h2`
   font-size: 1.5rem;
   color: ${colors.white};
   font-weight: 500;
-  padding-left: 1rem;
-  padding-bottom: 0.5rem;
+  padding: 4rem 0 1rem 1rem;
 
   @media (${breakpoints.large}) {
     font-size: 3rem;
+    padding: 2rem 0 2rem 1rem;
   }
 `
 

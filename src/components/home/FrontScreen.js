@@ -40,7 +40,7 @@ const FrontScreen = () => {
   }
 
   return (
-    <BackgroundImage Tag="section" fluid={imageData} backgroundColor={`rgba(37, 3, 74, 0.8)`}>
+    <BackgroundImage Tag="section" fluid={imageData}>
       <FrontScreenStyled>
         <ContainerStyled>
           <Header frontpage="true" />
@@ -53,7 +53,7 @@ const FrontScreen = () => {
 }
 
 const FrontScreenStyled = styled.div`
-  background-color: rgba(37, 3, 74, 0.8);
+  position: relative;
   min-height: 10px;
   width: 100%;
   background-position: bottom center;
@@ -61,6 +61,17 @@ const FrontScreenStyled = styled.div`
   background-size: cover;
   height: 100vh;
   /* fix for chrome later */
+
+  &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: ${colors.secondaryOne};
+    mix-blend-mode: multiply;
+  }
 
   @media (${breakpoints.large}) {
     height: 100vh;
@@ -80,6 +91,7 @@ const ContainerStyled = styled.div`
 `
 
 const HeaderStyled = styled.h1`
+  mix-blend-mode: normal;
   font-size: 9vw;
   color: ${colors.white};
   transform: translateY(30%);

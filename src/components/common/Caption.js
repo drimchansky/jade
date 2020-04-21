@@ -14,13 +14,13 @@ const Caption = ({ title, subtitle, align }) => {
 
 const CaptionStyled = styled.div`
   text-align: center;
-  padding: 2rem 0 1rem 0;
+  padding: 2rem 10px 1rem 10px;
   color: ${colors.secondaryTwo};
   max-width: 600px;
   margin: 0 auto;
 
   @media (min-width: 600px) {
-    padding: 3rem 0 2rem 0;
+    padding: 3rem 10px 2rem 10px;
     max-width: ${props => (props.align ? '1300px' : '')};
     text-align: ${props => (props.align ? props.align : '')};
   }
