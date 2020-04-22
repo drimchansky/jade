@@ -40,7 +40,7 @@ const Services = () => {
         <Grid container spacing={5}>
           {data.map(item => {
             return (
-              <Grid item xs={12} sm={6} md={4}>
+              <Grid key={item.title} item xs={12} sm={6} md={4}>
                 <ServiceItem
                   key={item.title}
                   title={item.title}
