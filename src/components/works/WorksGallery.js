@@ -89,19 +89,6 @@ const StyledItem = styled(Grid)`
       flex-basis: 100%;
     }
   }
-
-  @media (min-width: 900px) {
-    // offset effect
-    :nth-child(2),
-    :nth-child(4) {
-      transform: scale(1.2);
-      z-index: 99;
-
-      & a {
-        transform: scale(0.8);
-      }
-    }
-  }
 `
 
 export default WorksGallery

@@ -54,7 +54,7 @@ const StyledItem = styled.div`
 
   &:hover img,
   &:focus img {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 `
 
