@@ -21,22 +21,33 @@ const StyledItem = styled.div`
   position: relative;
   height: 30vw;
   overflow: hidden;
+  display: flex;
+  align-items: flex-start;
 
   & a {
-    position: absolute;
+    position: relative;
     z-index: 100;
     display: block;
-    height: 100%;
-    width: 100%;
     text-decoration: none;
     color: ${colors.white};
+    padding: 1rem;
+
+    @media (min-width: 900px) {
+      padding: 3rem 5rem;
+    }
 
     & span {
       display: block;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
     }
 
     & {
       small {
+        font-weight: 500;
+        opacity: 0.9;
+        font-size: 1.1rem;
       }
     }
   }

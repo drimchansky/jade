@@ -27,7 +27,7 @@ const WorksGallery = () => {
   return (
     <Section>
       <Container maxWidth="xl" disableGutters>
-        <Grid container component="ul">
+        <Grid container component="ul" style={{ overflow: 'hidden' }}>
           {tempImagesArray.map(item => {
             return (
               <StyledItem key={Math.random()} item component="li" xs={12} sm={6}>
@@ -51,6 +51,7 @@ const Section = styled.section`
 
 const StyledItem = styled(Grid)`
   position: relative;
+  z-index: 90;
 
   &:before {
     position: absolute;
@@ -59,17 +60,46 @@ const StyledItem = styled(Grid)`
     left: 0;
     width: 100%;
     height: 100%;
-    background: #000;
     mix-blend-mode: multiply;
     opacity: 0.9;
     z-index: 10;
   }
 
+  :nth-child(-4n + 5) {
+    &:before {
+      background: #5e239d;
+    }
+  }
+  :nth-child(-2n + 4) {
+    &:before {
+      background: #00f0b5;
+    }
+  }
+  :nth-child(5n + 3) {
+    &:before {
+      background: #f61067;
+    }
+  }
+
   @media (min-width: 600px) {
+    // wide block
     :nth-child(3n) {
       width: 100%;
       max-width: 100%;
       flex-basis: 100%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    // offset effect
+    :nth-child(2),
+    :nth-child(4) {
+      transform: scale(1.2);
+      z-index: 99;
+
+      & a {
+        transform: scale(0.8);
+      }
     }
   }
 `
