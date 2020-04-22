@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
+import { Container } from '@material-ui/core'
 // custom
 import { colors, breakpoints } from '../../utility/variables'
 
@@ -23,9 +24,9 @@ const Banner = ({ text }) => {
   return (
     <BackgroundImage Tag="section" fluid={imageData} backgroundColor={`rgba(37, 3, 74, 0.8)`}>
       <BannerStyled>
-        <ContainerStyled>
+        <Container>
           <HeaderStyled>{text}</HeaderStyled>
-        </ContainerStyled>
+        </Container>
       </BannerStyled>
     </BackgroundImage>
   )
@@ -44,18 +45,6 @@ const BannerStyled = styled.div`
     background-color: ${colors.secondaryOne};
     mix-blend-mode: multiply;
     z-index: -1;
-  }
-`
-
-const ContainerStyled = styled.div`
-  max-width: 1400px;
-  margin: 0 auto;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-
-  @media (${breakpoints.large}) {
-    align-items: center;
   }
 `
 

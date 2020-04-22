@@ -13,19 +13,19 @@ const StepsList = () => {
   //
   const data = [
     {
-      id: 1,
+      id: '01',
       title: 'Это очень удобный инструмент для моделей (макетов).',
       text:
         'Хотя Lorem ipsum напоминает классический латинский, вы не найдете никакого смысла в сказанном.',
     },
     {
-      id: 2,
+      id: '02',
       title: 'Это очень удобный инструмент для моделей (макетов).',
       text:
         'Хотя Lorem ipsum напоминает классический латинский, вы не найдете никакого смысла в сказанном.',
     },
     {
-      id: 3,
+      id: '03',
       title: 'Это очень удобный инструмент для моделей (макетов).',
       text:
         'Хотя Lorem ipsum напоминает классический латинский, вы не найдете никакого смысла в сказанном.',
@@ -54,7 +54,7 @@ const StepsList = () => {
             subtitle="Хотя Lorem ipsum напоминает классический латинский, вы не найдете никакого смысла в сказанном."
           />
         </Grid>
-        <Grid item container component="ul" style={{ paddingBottom: '2rem' }}>
+        <Grid item container component="ul" style={{ padding: '2rem 0' }}>
           {data.map(item => {
             return (
               <StyledItem key={item.id} item component="li" xs={12}>
@@ -77,6 +77,10 @@ const StepsList = () => {
 const StyledContainer = styled(Container)``
 
 const StyledItem = styled(Grid)`
+  &:not(:first-child) {
+    margin-top: 3rem;
+  }
+
   &:nth-child(odd) article {
     flex-direction: row-reverse;
   }
