@@ -19,6 +19,7 @@ const colors = {
   success: '#10F65E',
   warning: '#F67110',
   info: '#00A8F0',
+  coral: '#00F0B5',
 }
 
 const fonts = {

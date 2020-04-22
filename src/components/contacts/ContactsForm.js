@@ -42,7 +42,12 @@ const ContactsForm = () => {
           />
         </Grid>
         <Grid item container xs={12} justify="center">
-          <Button color="secondary" size="large" variant="contained">
+          <Button
+            color="secondary"
+            size="large"
+            variant="contained"
+            style={{ padding: '0.5rem 3rem', marginTop: '1.5rem' }}
+          >
             Отправить
           </Button>
         </Grid>
@@ -84,12 +89,14 @@ const Form = styled.form`
 
 const TextFieldStyled = styled(TextField)`
   & fieldset {
+    border-color: ${colors.secondaryThree} !important;
     @media (min-width: 960px) {
       border-color: ${colors.white} !important;
     }
   }
 
   & label {
+    color: ${colors.secondaryThree} !important;
     @media (min-width: 960px) {
       color: ${colors.white} !important;
     }
