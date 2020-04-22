@@ -12,7 +12,7 @@ const ContactsBg = () => {
         name
         childImageSharp {
           fluid {
-            src
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
