@@ -12,7 +12,7 @@ const ContactsForm = () => {
     <Form>
       <Title>Свяжитесь с нами</Title>
       <Grid container spacing={2}>
-        <Grid item xs={12} md={5}>
+        <Grid item container xs={12} md={5} alignContent="space-between">
           <TextFieldStyled
             id="name"
             label="Ваше имя"
@@ -78,16 +78,20 @@ const Form = styled.form`
     bottom: -1px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 5rem 3.5rem;
+    padding: 3rem 3.5rem 4rem 3.5rem;
     width: 900px;
     background: ${colors.secondaryFour};
   }
 `
 //
-//  *Overwriting MaterialUI styles. Using IMPORTANT is justified
+//  Overwriting MaterialUI styles. Using IMPORTANT is justified
 //
 
 const TextFieldStyled = styled(TextField)`
+  @media (min-width: 960px) {
+    margin-bottom: 0 !important;
+  }
+
   & fieldset {
     border-color: ${colors.secondaryThree} !important;
     @media (min-width: 960px) {
@@ -108,6 +112,7 @@ const TextFieldStyled = styled(TextField)`
 
     @media (min-width: 960px) {
       color: ${colors.white};
+      margin-bottom: none !important;
     }
   }
 `

@@ -19,10 +19,14 @@ const WorksItem = ({ img, title, description }) => {
 
 const StyledItem = styled.div`
   position: relative;
-  height: 30vw;
+  height: 35vw;
   overflow: hidden;
   display: flex;
   align-items: flex-start;
+
+  @media (min-width: 900px) {
+    height: 45vw;
+  }
 
   & a {
     position: relative;
