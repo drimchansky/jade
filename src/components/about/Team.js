@@ -44,6 +44,7 @@ const Team = () => {
 const Section = styled.section`
   @media (min-width: 960px) {
     background: linear-gradient(0deg, ${colors.secondaryFour} 67%, #fff 0);
+    padding-bottom: 10rem;
   }
 `
 

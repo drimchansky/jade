@@ -85,7 +85,7 @@ const Info = styled.div`
 const Social = styled.ul`
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 
   & li:last-child {
     svg {
