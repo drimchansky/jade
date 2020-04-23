@@ -44,14 +44,16 @@ export default class TeamSlider extends Component {
     ]
     return (
       <Section>
-        <Container maxWidth="xl" disableGutters>
+        <Container maxWidth="lg" disableGutters>
           <Slider {...settings}>
             {data.map(item => {
               return (
                 <div>
                   <StyledSlide container>
                     <StyledAside item md={3}>
-                      aside 1
+                      <img src="https://joeschmoe.io/api/v1/jake" alt="alt text" />
+                      <img src="https://joeschmoe.io/api/v1/jerry" alt="alt text" />
+                      <img src="https://joeschmoe.io/api/v1/jeane" alt="alt text" />
                     </StyledAside>
                     <StyledInner quotes={quotes} justify="center" item xs={12} md={6}>
                       <div>
@@ -64,7 +66,10 @@ export default class TeamSlider extends Component {
                       <span>{item.name}</span>
                     </StyledInner>
                     <StyledAside item md={3}>
-                      aside 2
+                      <img src="https://joeschmoe.io/api/v1/jane" alt="alt text" />
+                      <img src="https://joeschmoe.io/api/v1/jack" alt="alt text" />
+                      <img src="https://joeschmoe.io/api/v1/jenni" alt="alt text" />
+                      <img src="https://joeschmoe.io/api/v1/jordan" alt="alt text" />
                     </StyledAside>
                   </StyledSlide>
                 </div>
@@ -193,8 +198,68 @@ const StyledAside = styled(Grid)`
     position: relative;
   }
 
+  & img {
+    position: absolute;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    object-fit: conver;
+  }
+
   &:first-child {
+    & img {
+      :nth-child(1) {
+        bottom: 10%;
+        left: 10%;
+      }
+    }
+    & img {
+      :nth-child(2) {
+        top: 40%;
+        left: 60%;
+        height: 90px;
+        width: 90px;
+      }
+    }
+    & img {
+      :nth-child(3) {
+        right: 0;
+        bottom: 20%;
+        height: 70px;
+        width: 70px;
+      }
+    }
   }
   &:last-child {
+    & img {
+      :nth-child(1) {
+        bottom: 10%;
+        left: 10%;
+      }
+    }
+    & img {
+      :nth-child(2) {
+        top: 45%;
+        left: 50%;
+        height: 90px;
+        width: 90px;
+      }
+    }
+    & img {
+      :nth-child(3) {
+        top: 30%;
+        left: 0;
+        height: 70px;
+        width: 70px;
+      }
+    }
+    & img {
+      :nth-child(4) {
+        right: 0;
+        bottom: 0;
+        height: 85px;
+        width: 85px;
+      }
+    }
   }
 `
