@@ -79,6 +79,37 @@ export default class TeamSlider extends Component {
 
 const Section = styled.section`
   padding: 3rem 0;
+  position: relative;
+
+  & .slick-arrow {
+    background: ${colors.primary};
+    border-radius: 50%;
+    padding: 1rem;
+    z-index: 11;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -44%);
+      opacity: 1;
+    }
+  }
+
+  & .slick-prev {
+    left: 10px;
+
+    @media (min-width: 960px) {
+      left: 1rem;
+    }
+  }
+  & .slick-next {
+    right: 10px;
+
+    @media (min-width: 960px) {
+      right: 1rem;
+    }
+  }
 
   @media (min-width: 960px) {
     margin-top: -13rem;
