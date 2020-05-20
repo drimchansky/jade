@@ -18,7 +18,7 @@ const Hamburger = ({ open, setOpen }) => {
 }
 
 const StyledHamburger = styled.button`
-  position: fixed;
+  position: ${props => (props.open ? 'fixed' : 'absolute')};
   height: 80px;
   width: 100px;
   right: 0.5rem;
