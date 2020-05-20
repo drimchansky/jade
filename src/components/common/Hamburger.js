@@ -18,13 +18,13 @@ const Hamburger = ({ open, setOpen }) => {
 }
 
 const StyledHamburger = styled.button`
-  position: absolute;
+  position: fixed;
   height: 80px;
   width: 100px;
   right: 0.5rem;
   top: 0.5rem;
   cursor: pointer;
-  z-index: 11;
+  z-index: 301;
   border: none;
   padding: 0;
   background: none;

@@ -94,10 +94,6 @@ const CardsStyled = styled.div`
         transition: color 0.2s;
       }
 
-      &:hover {
-        box-shadow: 5px 20px 50px rgba(102, 51, 153, 0.2);
-      }
-
       &:first-child {
         margin-left: 0;
       }

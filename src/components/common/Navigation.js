@@ -25,16 +25,17 @@ const NavigationStyled = styled.div`
   justify-content: space-between;
   background: ${colors.secondaryOne};
   color: ${colors.white};
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
   width: 100%;
   transition: all 0.3s ease-in-out;
   visibility: ${props => (props.open ? 'visible' : 'hidden')};
   opacity: ${props => (props.open ? '1' : '0')};
   transform: ${props => (props.open ? 'scale(1)' : 'scale(0.4)')};
-  z-index: 10;
+  z-index: 300;
 
   @media (${breakpoints.large}) {
     display: flex;
