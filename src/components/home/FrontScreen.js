@@ -122,6 +122,11 @@ const LinkStyled = styled(Link)`
   padding-right: 5.5rem;
   margin-right: 20%;
 
+  &:hover:after,
+  &:focus:after {
+    background-size: 50%;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -148,6 +153,7 @@ const LinkStyled = styled(Link)`
     vertical-align: middle;
     line-height: 1.8rem;
     text-align: center;
+    transition: background-size 0.3s;
     background: url(${arrow}) no-repeat;
     background-size: 40%;
     background-position: center center;

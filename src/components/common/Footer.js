@@ -114,6 +114,11 @@ const List = styled.div`
     padding: 0.5rem;
     display: block;
     font-weight: 300;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
   }
 `
 
@@ -157,6 +162,11 @@ const Social = styled.div`
   & li {
     & a {
       padding: 0.5rem;
+
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
     }
   }
 `

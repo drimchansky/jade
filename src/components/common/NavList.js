@@ -57,20 +57,26 @@ const NavListStyled = styled.nav`
     padding: 1.5rem;
     display: block;
 
+    &:before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      bottom: 2px;
+      left: 50%;
+      border-radius: 4px;
+      transition: width 0.3s ease-in-out, background 0.2s ease-in;
+      transform: translateX(-50%);
+      width: 0;
+      background: transparent;
+    }
+
     &:focus {
       outline: none;
     }
 
     &:hover:before,
     &:focus:before {
-      content: '';
-      position: absolute;
-      height: 2px;
-      bottom: 2px;
-      left: 50%;
-      transform: translateX(-50%);
       width: 55%;
-      border-radius: 4px;
       background: ${colors.white};
 
       @media (${breakpoints.large}) {

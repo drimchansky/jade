@@ -101,7 +101,13 @@ const WrapperStyled = styled.div`
     color: ${colors.primary};
     border: none;
     border-bottom: 2px solid ${colors.lightGrey};
+    transition: all 0.3s;
     background: linear-gradient(180deg, rgba(242, 242, 242, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(180deg, rgba(242, 242, 242, 0.8) 100%, rgba(255, 255, 255, 0) 0%);
+    }
 
     @media (min-width: 576px) {
       margin: 0;
