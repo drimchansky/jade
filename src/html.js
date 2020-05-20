@@ -30,7 +30,7 @@ export default function HTML(props) {
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              console.log('Inline js')
+              // inline js
             `,
           }}
         />

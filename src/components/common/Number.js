@@ -9,7 +9,7 @@ import { colors, breakpoints } from '../../utility/variables'
 const Number = ({ frontpage }) => {
   return (
     <NumberStyled frontpage={frontpage}>
-      <Phone size="26px" fill={frontpage ? colors.white : colors.secondaryTwo} />
+      <Phone size="26px" />
       (01) 666 - 693 - 456
     </NumberStyled>
   )
@@ -24,8 +24,16 @@ const NumberStyled = styled.span`
   padding: 1rem;
   white-space: nowrap;
 
+  & > svg {
+    fill: ${colors.white};
+  }
+
   @media (${breakpoints.large}) {
     color: ${props => (props.frontpage ? colors.white : colors.secondaryTwo)};
+
+    & > svg {
+      fill: ${props => (props.frontpage ? colors.white : colors.secondaryTwo)};
+    }
   }
 `
 

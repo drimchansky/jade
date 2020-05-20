@@ -19,7 +19,7 @@ const Navigation = ({ open, setOpen, frontpage }) => {
 }
 
 const NavigationStyled = styled.div`
-  display: ${props => (props.open ? 'flex' : 'none')};
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -30,7 +30,10 @@ const NavigationStyled = styled.div`
   top: 0;
   height: 100%;
   width: 100%;
+  transition: all 0.3s ease-in-out;
   visibility: ${props => (props.open ? 'visible' : 'hidden')};
+  opacity: ${props => (props.open ? '1' : '0')};
+  transform: ${props => (props.open ? 'scale(1)' : 'scale(0.4)')};
   z-index: 10;
 
   @media (${breakpoints.large}) {
