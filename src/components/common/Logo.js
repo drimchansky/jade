@@ -24,7 +24,7 @@ const StyledLogo = styled(Link)`
   padding: 1rem;
   color: ${colors.white};
   text-decoration: none;
-  z-index: 250;
+  z-index: 100;
 
   @media (${breakpoints.large}) {
     color: ${props => (props.frontpage ? colors.white : colors.secondaryTwo)};
