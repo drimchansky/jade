@@ -14,7 +14,7 @@ export default () => {
     <>
       <SEO title="Главная" />
       <Page>
-        <Logo position="absolute" mobile="true" />
+        <Logo position="fixed" mobile="true" />
         <FrontScreen />
         <Cards />
         <Mailing />
