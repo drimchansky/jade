@@ -1,12 +1,11 @@
 // libraries
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import { Link } from 'gatsby'
 //components
 import Header from '../common/Header'
-import Mouse from './Mouse'
 import arrow from '../../assets/icons/next.png'
 // custom
 import { breakpoints, colors } from '../../utility/variables'
@@ -40,6 +39,16 @@ const FrontScreen = () => {
     return { __html: header }
   }
 
+  useEffect(() => {
+    document.documentElement.classList.remove('no-js')
+    let vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+    window.addEventListener('resize', () => {
+      vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    })
+  })
+
   return (
     <BackgroundImage Tag="section" fluid={imageData}>
       <FrontScreenStyled>
@@ -48,7 +57,6 @@ const FrontScreen = () => {
           <HeaderStyled dangerouslySetInnerHTML={createHeader()}></HeaderStyled>
           <LinkStyled to="/contacts">Свяжитесь с нами</LinkStyled>
         </ContainerStyled>
-        <Mouse />
       </FrontScreenStyled>
     </BackgroundImage>
   )
@@ -61,8 +69,7 @@ const FrontScreenStyled = styled.div`
   background-position: bottom center;
   background-repeat: repeat-y;
   background-size: cover;
-  height: 100vh;
-  /* fix for chrome later */
+  height: calc(var(--vh, 1vh) * 100);
 
   &:before {
     position: absolute;
