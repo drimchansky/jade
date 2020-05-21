@@ -6,6 +6,7 @@ import BackgroundImage from 'gatsby-background-image'
 import { Link } from 'gatsby'
 //components
 import Header from '../common/Header'
+import Mouse from './Mouse'
 import arrow from '../../assets/icons/next.png'
 // custom
 import { breakpoints, colors } from '../../utility/variables'
@@ -47,6 +48,7 @@ const FrontScreen = () => {
           <HeaderStyled dangerouslySetInnerHTML={createHeader()}></HeaderStyled>
           <LinkStyled to="/contacts">Свяжитесь с нами</LinkStyled>
         </ContainerStyled>
+        <Mouse />
       </FrontScreenStyled>
     </BackgroundImage>
   )
