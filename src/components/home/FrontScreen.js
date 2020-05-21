@@ -1,5 +1,5 @@
 // libraries
-import React, { useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
@@ -39,16 +39,6 @@ const FrontScreen = () => {
     return { __html: header }
   }
 
-  useEffect(() => {
-    document.documentElement.classList.remove('no-js')
-    let vh = window.innerHeight * 0.01
-    document.documentElement.style.setProperty('--vh', `${vh}px`)
-    window.addEventListener('resize', () => {
-      vh = window.innerHeight * 0.01
-      document.documentElement.style.setProperty('--vh', `${vh}px`)
-    })
-  })
-
   return (
     <BackgroundImage Tag="section" fluid={imageData}>
       <FrontScreenStyled>
@@ -69,7 +59,7 @@ const FrontScreenStyled = styled.div`
   background-position: bottom center;
   background-repeat: repeat-y;
   background-size: cover;
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100vh;
 
   &:before {
     position: absolute;

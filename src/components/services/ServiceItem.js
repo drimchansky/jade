@@ -48,6 +48,8 @@ const IconWrap = styled.div`
   align-items: center;
 
   & svg {
+    height: 100%;
+    width: 100%;
   }
 `
 

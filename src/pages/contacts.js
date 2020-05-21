@@ -15,7 +15,7 @@ export default () => {
     <>
       <SEO title="Наши контакты" />
       <Page>
-        <Logo position="absolute" mobile="true" />
+        <Logo mobile="true" />
         <Header />
         <Banner text="Связь с нами" image="laptop" />
         <Contacts />
