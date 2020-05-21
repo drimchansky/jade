@@ -14,6 +14,7 @@ const Logo = ({ frontpage, position, mobile }) => {
 }
 
 const StyledLogo = styled(Link)`
+  display: ${props => (props.frontpage ? 'none' : 'block')};
   position: ${props => props.position || ''};
   left: 0;
   top: 0;
@@ -23,7 +24,7 @@ const StyledLogo = styled(Link)`
   padding: 1rem;
   color: ${colors.white};
   text-decoration: none;
-  z-index: 999;
+  z-index: 250;
 
   @media (${breakpoints.large}) {
     color: ${props => (props.frontpage ? colors.white : colors.secondaryTwo)};

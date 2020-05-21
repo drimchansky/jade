@@ -22,7 +22,7 @@ const NavigationStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background: ${colors.secondaryOne};
   color: ${colors.white};
   position: fixed;

@@ -122,11 +122,6 @@ const LinkStyled = styled(Link)`
   padding-right: 5.5rem;
   margin-right: 20%;
 
-  &:hover:after,
-  &:focus:after {
-    background-size: 50%;
-  }
-
   &:before {
     content: '';
     position: absolute;

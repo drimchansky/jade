@@ -40,7 +40,6 @@ const NavList = ({ frontpage, open, setOpen }) => {
 
 const NavListStyled = styled.nav`
   width: 100%;
-  transform: translateY(-10%);
 
   & ul {
     display: flex;
